@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 	
 	<div style="height: 54px;width: 100%;background: #fff;margin: 10px" >
 		<div style="height: 30px;width: 10px; background: #337ab7;float: left;    margin:12px;"></div>

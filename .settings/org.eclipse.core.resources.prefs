@@ -1,8 +1,9 @@
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
->>>>>>>=6ac813779ce335c96a9b2147a29598fc195940b2
+>>>>>>>=cb9dafac0fb08732bbf5d5cc283e28c2b14f7c3b
 eclipse.preferences.version=1
 encoding//src/main/java=UTF-8
+encoding//src/main/resources=UTF-8
 encoding//src/main/resources/jdbc.properties=UTF-8
 encoding//src/main/resources/log4j.properties=UTF-8
 encoding//src/main/resources/mapper/AdminDao.xml=UTF-8
@@ -24,12 +25,9 @@ encoding//src/main/webapp/jsp/Teacher/teacherInfo/mycourse_jion.jsp=UTF-8
 encoding//src/main/webapp/jsp/Teacher/teacherInfo/teacher_class_iframe.jsp=UTF-8
 encoding//src/main/webapp/jsp/Teacher/teacherInfo/teacher_course_iframe.jsp=UTF-8
 encoding//src/main/webapp/jsp/Teacher/teacherInfo/teacher_myInfo_iframe.jsp=UTF-8
-<<<<<<< HEAD
 encoding//src/main/webapp/jsp/TurnClassJsp/turnClassTeam.jsp=UTF-8
-=======
 encoding//src/main/webapp/jsp/student_personal_center/index.jsp=UTF-8
 encoding//src/main/webapp/jsp/student_personal_center/mycourse.jsp=UTF-8
->>>>>>> cb9dafac0fb08732bbf5d5cc283e28c2b14f7c3b
 encoding//src/main/webapp/jsp/user_login.jsp=UTF-8
 encoding//src/test/java=UTF-8
 encoding/<project>=UTF-8
