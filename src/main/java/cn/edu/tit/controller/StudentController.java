@@ -118,7 +118,8 @@ public class StudentController {
 					mv.addObject("readResult", readResult);//返回信息
 					request.getSession().setAttribute("studentId", student.getStudentId());
 					request.getSession().setAttribute("student", student);
-					mv=mainController.toMain(request); //去首页
+//					mv=mainController.toMain(request); //去首页
+					mv = this.toStudentPage(request);
 					//清楚其他用户SESSION
 					
 					request.getSession().removeAttribute("teacher");
