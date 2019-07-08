@@ -39,23 +39,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     transform: scale(1.10);
     
 }
+
+.chengguo-out{width:100%}
     	
     </style>
     <script src="${pageContext.request.contextPath}/js/jquery.min%20(1).js" ></script>
-    <!-- <script type="text/javascript">
-        $(function (){
-            var order=1;
-            window.setInterval(lunbo,1000);
-            function lunbo(){
-                if(order==4){
-                    order=0;
-                }
-                $(".banner-img img").eq(order).css("display","block").siblings().css("display","none");
-                $(".square .square1").eq(order).css("background-color","#FF6600").siblings().css("background-color","white");
-                order++;
-            }
-        });
-    </script> -->
     <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/bootstrap.min.css">
 <script
@@ -111,24 +99,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</div>
 					</div>
 				</div>
-      
-      
-      
-      
-      
-      
-          <%-- <div class="banner-img">
-              <img src="${pageContext.request.contextPath}/images/banner_img01.jpg" alt="" style="width: 1400px;height:600px;overflow: hidden;"/>
-              <img src="${pageContext.request.contextPath}/images/banner_img02.jpg" alt="" style="width: 1400px;height:600px;overflow: hidden;"/>
-              <img src="${pageContext.request.contextPath}/images/banner_img03.jpg" alt="" style="width: 1400px;height:600px;overflow: hidden;"/>
-              <img src="${pageContext.request.contextPath}/images/banner_img04.jpg" alt="" style="width: 1400px;height:600px;overflow: hidden;"/>
-          </div>
-          <div class="square">
-              <div class="square1"></div>
-              <div class="square1"></div>
-              <div class="square1"></div>
-              <div class="square1"></div>
-          </div> --%>
       </div>
       <main>
           <!--基地-->
@@ -182,58 +152,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                        </a>
                       </div>
                   </c:forEach>
-                      <!-- <td>
-                          <div  class="jidixiangmu-li">
-                              <div class="rel-img"><img src="../img/tu4.png" alt="" style="width: 300px;height: 200px;"></div>
-                              <div class="info">
-                                  <div class="title">
-                                      <p>课程名：岩石学</p>
-                                      <p>创建教师：邵龙义、鲁静</p>
-                                      <p>创建时间：2006-12-22</p>
-                                      <p>课程人数：1980</p>
-                                  </div>
-                              </div>
-                          </div>
-                      </td>
-                      <td>
-                          <div  class="jidixiangmu-li">
-                              <div class="rel-img"><img src="../img/tu5.png" alt="" style="width: 300px;height: 200px;"></div>
-                              <div class="info">
-                                  <div class="title">
-                                      <p>课程名：传感技术与应用</p>
-                                      <p>创建教师：张晓琳、唐文彦</p>
-                                      <p>创建时间：2006-12-22</p>
-                                      <p>课程人数：1800</p>
-                                  </div>
-                              </div>
-                          </div>
-                      </td>
-                      <td>
-                          <div  class="jidixiangmu-li">
-                              <div class="rel-img"><img src="../img/tu6.jpg" alt="" style="width: 300px;height: 200px;"></div>
-                              <div class="info">
-                                  <div class="title">
-                                      <p>课程名：土木工程概论</p>
-                                      <p>创建教师：熊峰</p>
-                                      <p>创建时间：2006-12-22</p>
-                                      <p>课程人数：2300</p>
-                                  </div>
-                              </div>
-                          </div>
-                      </td>
-                      <td>
-                          <div  class="jidixiangmu-li">
-                              <div class="rel-img"><img src="../img/tu7.jpg" alt="" style="width: 300px;height: 200px;"></div>
-                              <div class="info">
-                                  <div class="title">
-                                      <p>课程名：模拟电子技术基础</p>
-                                      <p>创建教师：许菲、吴友宇、华剑</p>
-                                      <p>创建时间：2006-12-22</p>
-                                      <p>课程人数：2170</p>
-                                  </div>
-                              </div>
-                          </div>
-                      </td> -->
                  </div>
                  </div>
           </div>
@@ -347,16 +265,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                   	<a
 							href="${pageContext.request.contextPath}/achievement/toDetailCourseExpand?achievementId=${item.achievementId }">
 							<div class="chengguo-out"
-								style="padding: 0; height: 378px; margin-top: 1%;">
+								style="padding: 0; height: 390px; margin-bottom:2%;">
 								<div class="doorPlank xiangmu-out"
 									style="padding: 1.5rem; background-color: white; height: 100%;width: 91%;">
 									<div class="rel-img" style="width: 100%; height: 58%;">
 										<img src="${pageContext.request.contextPath}/img/fire.png"
 											style="position: absolute; margin-left: 0; margin-top: 0;width: 23px;height: 23px;">
 										<img alt="" style="width: 100%; height: 100%;"
-											src="${pageContext.request.contextPath}/images/tu2.jpg" />
+											src="${pageContext.request.contextPath}/jsp/showImg.jsp?path=${item.firstPicture }" />
 									</div>
-									<div class="info" style="width: 100%; height: 80px;">
+									<div class="info" style="width: 100%; height: 70px; margin-bottom:2%;">
 										<div class="infoContent">
 											<h3 class="achievementTitle">
 												<b>${item.achievementName }</b>
@@ -364,9 +282,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											<p class="description">${item.introduction }</p>
 											<p class="description">
 												<b>${item.achievementCategory }</b>推荐&nbsp&nbsp<span
-													class="publishTime">发布于：${item.finishTime }</span>
+													class="publishTime">发布于：${item.finishTime }&nbsp;&nbsp;&nbsp;浏览量:${item.browseVolume }</span>
 											</p>
-											<p class="publishTime" style="float: right; color: gray">浏览量:${item.browseVolume }</p>
+											<%-- <p class="publishTime" style="float: right; color: gray">浏览量:${item.browseVolume }</p> --%>
 										</div>
 									</div>
 								</div>
@@ -381,14 +299,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                   	<a
 							href="${pageContext.request.contextPath}/achievement/toDetailCourseExpand?achievementId=${item.achievementId }">
 							<div class="chengguo-out"
-								style="padding: 0; height: 378px; margin-top: 1%;">
+								style="padding: 0; height: 390px; margin-bottom: 2%;">
 								<div class="doorPlank xiangmu-out"
 									style="padding: 1.5rem; background-color: white; height: 100%;width: 91%;">
 									<div class="rel-img" style="width: 100%; height: 58%;">
 										<img src="${pageContext.request.contextPath}/img/fire.png"
 											style="position: absolute; margin-left: 0; margin-top: 0;width: 23px;height: 23px;">
 										<img alt="" style="width: 100%; height: 100%;"
-											src="${pageContext.request.contextPath}/images/tu2.jpg" />
+											src="${pageContext.request.contextPath}/jsp/showImg.jsp?path=${item.firstPicture }" />
 									</div>
 									<div class="info" style="width: 100%; height: 80px;">
 										<div class="infoContent">
@@ -398,9 +316,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											<p class="description">${item.introduction }</p>
 											<p class="description">
 												<b>${item.achievementCategory }</b>推荐&nbsp&nbsp<span
-													class="publishTime">发布于：${item.finishTime }</span>
+													class="publishTime">发布于：${item.finishTime }&nbsp;&nbsp;&nbsp;浏览量:${item.browseVolume }</span>
 											</p>
-											<p class="publishTime" style="float: right; color: gray">浏览量:${item.browseVolume }</p>
+											<%-- <p class="publishTime" style="float: right; color: gray">浏览量:${item.browseVolume }</p> --%>
 										</div>
 									</div>
 								</div>
