@@ -58,7 +58,7 @@
 					
 					}, {
 						field : 'taskTitle',
-						title : '作业名称',
+						title : '名称',
 						
 					}, {
 						field : 'mygrade',
