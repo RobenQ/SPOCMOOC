@@ -605,6 +605,7 @@ public class StudentController {
 		}
 		List<Task>taskList = new ArrayList<Task>();
 		String virtualClassNum = (String) request.getSession().getAttribute("virtualClassNum");
+		System.out.println(virtualClassNum);
 		String studentId = (String) request.getSession().getAttribute("studentId");
 		taskList = teacherService.getTaskByCategory(virtualClassNum, taskCategory);
 		HashMap<String, Integer>studentGradeMap = new HashMap<String, Integer>();

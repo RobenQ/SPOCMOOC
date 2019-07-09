@@ -60,7 +60,12 @@
 			}, {
 				field : 'studentName',
 				title : '姓名',
-				width:100
+				width:100,
+				events: {
+		            'click.viewStudentPersonAccomplishment': function(e, value, row, index) {
+		            	aletr("nihao iiohuiguigui");
+		            }
+		            }
 			}, {
 				field : 'studentId',
 				title : '学号',
@@ -103,8 +108,10 @@
 	        }, formatNoMatches: function () {
 	            //没有匹配的结果
 	            return '无符合条件的记录';
+	        },onClickRow:function(row,$element){
+	        	var studentId = $($element).children().eq(2).text();
+	        	window.location.href = "${pageContext.request.contextPath}/teacher/toStudentPersonAccomplishment?studentId="+studentId;
 	        }
-
 		});
 	});
 		</script>
