@@ -67,8 +67,10 @@ public class TurnClassController {
 			for (String string : virList) {
 				List<RealClass> listReal = teacherService.getRealClassList(string);
 				task.setClassList(listReal);
-				Teacher tea = teacherService.teacherLoginByEmployeeNum(task.getPublisherId());
-				task.setPublisherId(tea.getTeacherName());
+//				Teacher tea = teacherService.teacherLoginByEmployeeNum(task.getPublisherId());
+//				System.err.println(tea.getTeacherName());
+//				task.setPublisherId(tea.getTeacherName());
+				task.setPublisherId(teacherService.getTeacherNameById(task.getPublisherId()));
 				endList.add(task);
 			}
 		}
