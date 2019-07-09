@@ -139,4 +139,9 @@ public class TurnClassServiceImpl implements ITurnClassService{
 		return turnClassDao.queryTurnAccessory(taskId,teamId);
 	}
 
+	@Override
+	public List<Task> getCourseTurnClass(String courseId) throws Exception {
+		return turnClassDao.getCourseTurnClass(courseId);
+	}
+
 }

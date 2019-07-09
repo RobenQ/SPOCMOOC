@@ -19,6 +19,8 @@ import cn.edu.tit.bean.TurnClassTeam;
 public interface ITurnClassDao {
 
 	List<Task> getAllTurnClass() throws Exception;
+	
+	public List<Task> getCourseTurnClass(@Param("courseId")String courseId) throws Exception;
 
 	List<Student> getAllStudentByRealClass(@Param("realClassNum")String realClassNum)throws Exception;
 

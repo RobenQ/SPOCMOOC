@@ -167,6 +167,14 @@
 		task where
 		task_category = "turn_class";
 	</select>
+	
+	<select id="getCourseTurnClass" resultMap="taskMap">
+		select * from
+		task where
+		task_category = "turn_class"
+		and
+		course_id = #{courseId};
+	</select>
 
 	<select id="getAllStudentByRealClass" parameterType="java.lang.String"
 		resultMap="studentMap">

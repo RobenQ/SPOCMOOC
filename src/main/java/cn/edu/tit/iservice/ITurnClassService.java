@@ -17,6 +17,8 @@ import cn.edu.tit.bean.TurnClassTeam;
 public interface ITurnClassService {
 
 	List<Task> getAllTurnClass() throws Exception;
+	
+	List<Task> getCourseTurnClass(String courseId) throws Exception;
 
 	List<TurnClassTeam> getTaskTeam(String taskId)throws Exception;
 

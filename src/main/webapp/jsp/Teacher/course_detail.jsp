@@ -402,7 +402,8 @@ header nav li a{
 				<ul style="margin-top: 25px; margin-left: -14px;">
 					<li style="float: left; margin-right: 25px"><a style="font-size: 22px;" href="${pageContext.request.contextPath}/teacher/toCourseDetail/3334C5DC8CE2451AA5B8B1C78EFBA204#">课程介绍</a></li>
 					<li style="float: left; margin-right: 25px"><a style="font-size: 22px;" href="${pageContext.request.contextPath}/teacher/toCourseResource/0">资源</a></li>
-					<li style="float: left; margin-right: 25px; font-size: 22px;"><a href="${pageContext.request.contextPath}/turnClass/toTurnClassMainPage">翻转课堂</a>
+					<%-- <li style="float: left; margin-right: 25px; font-size: 22px;"><a href="${pageContext.request.contextPath}/turnClass/toTurnClassMainPage">翻转课堂</a> --%>
+					<li style="float: left; margin-right: 25px; font-size: 22px;"><a href="#turnClass">翻转课堂</a>
 					</li><li style="float: left; margin-right: 25px"><a style="font-size: 22px;" href="${pageContext.request.contextPath}/teacher/toCourseDetail/3334C5DC8CE2451AA5B8B1C78EFBA204">挑战</a></li>
 					<li style="float: left; margin-right: 25px; margin-bottom: 2%;"><a style="font-size: 22px;" href="${pageContext.request.contextPath}/achievement/selectCategory?category=CourseExpand">课程成果</a></li>
 				</ul>
@@ -474,6 +475,23 @@ header nav li a{
 					
 				</div>
 			</div>
+			<!-- 翻转课堂显示 -->
+				<iframe id="turnClass" width="100%" style="border: none;min-height: 0" src="${pageContext.request.contextPath}/turnClass/toCourseTurnClass/${courseId}"></iframe>
+   <script type="text/javascript">
+ /*   自适应高度 */
+   function setIframeHeight(iframe) {
+	   if (iframe) {
+	   var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+	   if (iframeWin.document.body) {
+	   iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+	   }
+	   }
+	   };
+
+	   window.onload = function () {
+	   setIframeHeight(document.getElementById('turnClass'));
+	   };
+   </script>
     <style>
     	footer{
     width: 100%;
