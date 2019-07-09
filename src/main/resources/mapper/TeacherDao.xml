@@ -299,8 +299,7 @@
 		<foreach collection="list" item="taskId" open="(" separator=","
 			close=")" index="index">
 			#{taskId}
-		</foreach>
-		order by task_end_time asc;
+		</foreach>order by task_end_time asc;
 	</select>
 
 	<select id="getTaskByPointAndCourse" parameterType="java.util.List"

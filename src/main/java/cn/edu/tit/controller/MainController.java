@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -78,10 +79,9 @@ public class MainController {
 			
 			mv.addObject("publishTime",publishTime);
 			mv.addObject("teacherList",teacherList);
-
-			mv.setViewName("/jsp/main");
 			mv.addObject("teacher",request.getSession().getAttribute("teacher"));
 			mv.addObject("student",request.getSession().getAttribute("student"));
+			mv.setViewName("/jsp/main");
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();

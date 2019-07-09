@@ -119,7 +119,7 @@ public class StudentController {
 					request.getSession().setAttribute("studentId", student.getStudentId());
 					request.getSession().setAttribute("student", student);
 //					mv=mainController.toMain(request); //去首页
-					mv = this.toStudentPage(request);
+					mv = this.toStudentPage(request);//去学生个人中心
 					//清楚其他用户SESSION
 					
 					request.getSession().removeAttribute("teacher");

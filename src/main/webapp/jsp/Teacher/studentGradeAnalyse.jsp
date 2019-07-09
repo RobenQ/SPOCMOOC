@@ -22,7 +22,7 @@
 				var $table;
 		var $tasktype;
 		
-			function TableInit(tableid){
+			function TableInit1(tableid){
 				$table = $('#'+tableid).bootstrapTable({
 					method : 'get',
 					url : "${pageContext.request.contextPath}/student/ajaxGetStudentTaskListPage?taskCategory=work",//请求路径
@@ -58,7 +58,169 @@
 					
 					}, {
 						field : 'taskTitle',
-						title : '名称',
+						title : '作业名称',
+						
+					}, {
+						field : 'mygrade',
+						title : '个人得分',
+						
+					}, {
+						field : 'minGrade',
+						title : '班级最低分',
+						
+					}, {
+						field : 'maxGrade',
+						title : '班级最高分',
+						
+					}]
+						
+				});
+			};
+			function TableInit2(tableid){
+				$table = $('#'+tableid).bootstrapTable({
+					method : 'get',
+					url : "${pageContext.request.contextPath}/student/ajaxGetStudentTaskListPage?taskCategory=work",//请求路径
+					dataType : "json",
+					striped : true, //是否显示行间隔色
+					pageNumber : 1, //初始化加载第一页
+					pagination : true,//是否分页
+					striped: true,  //是否显示行间隔色
+					sidePagination : 'client',//server:服务器端分页|client：前端分页
+					pageSize : 5,//单页记录数
+					pageList : [ 5, 10, 20, 30 ],//可选择单页记录数
+					showRefresh : false,//刷新按钮
+					clickToSelect: true,                //是否启用点击选中行
+					singleSelect  : true,
+					queryParams : function(params) {//上传服务器的参数
+						var temp = {//如果是在服务器端实现分页，limit、offset这两个参数是必须的
+							limit : params.limit, // 每页显示数量
+							offset : params.offset // SQL语句起始索引
+							//page : (params.offset / params.limit) + 1, //当前页码 
+							/* Name : $('#search_name').val(),
+							Tel : $('#search_tel').val() */
+						};
+						return temp;
+					},
+					columns : [{
+						field : 'taskId',
+						title : '序号',
+						formatter: function (value, row, index) {
+				            var pageSize = $('#'+tableid).bootstrapTable('getOptions').pageSize;     //通过table的#id 得到每页多少条
+				            var pageNumber = $('#'+tableid).bootstrapTable('getOptions').pageNumber; //通过table的#id 得到当前第几页
+				            return pageSize * (pageNumber - 1) + index + 1;    // 返回每条的序号： 每页条数 *（当前页 - 1 ）+ 序号
+				        }
+					
+					}, {
+						field : 'taskTitle',
+						title : '实验名称',
+						
+					}, {
+						field : 'mygrade',
+						title : '个人得分',
+						
+					}, {
+						field : 'minGrade',
+						title : '班级最低分',
+						
+					}, {
+						field : 'maxGrade',
+						title : '班级最高分',
+						
+					}]
+						
+				});
+			};
+			function TableInit3(tableid){
+				$table = $('#'+tableid).bootstrapTable({
+					method : 'get',
+					url : "${pageContext.request.contextPath}/student/ajaxGetStudentTaskListPage?taskCategory=work",//请求路径
+					dataType : "json",
+					striped : true, //是否显示行间隔色
+					pageNumber : 1, //初始化加载第一页
+					pagination : true,//是否分页
+					striped: true,  //是否显示行间隔色
+					sidePagination : 'client',//server:服务器端分页|client：前端分页
+					pageSize : 5,//单页记录数
+					pageList : [ 5, 10, 20, 30 ],//可选择单页记录数
+					showRefresh : false,//刷新按钮
+					clickToSelect: true,                //是否启用点击选中行
+					singleSelect  : true,
+					queryParams : function(params) {//上传服务器的参数
+						var temp = {//如果是在服务器端实现分页，limit、offset这两个参数是必须的
+							limit : params.limit, // 每页显示数量
+							offset : params.offset // SQL语句起始索引
+							//page : (params.offset / params.limit) + 1, //当前页码 
+							/* Name : $('#search_name').val(),
+							Tel : $('#search_tel').val() */
+						};
+						return temp;
+					},
+					columns : [{
+						field : 'taskId',
+						title : '序号',
+						formatter: function (value, row, index) {
+				            var pageSize = $('#'+tableid).bootstrapTable('getOptions').pageSize;     //通过table的#id 得到每页多少条
+				            var pageNumber = $('#'+tableid).bootstrapTable('getOptions').pageNumber; //通过table的#id 得到当前第几页
+				            return pageSize * (pageNumber - 1) + index + 1;    // 返回每条的序号： 每页条数 *（当前页 - 1 ）+ 序号
+				        }
+					
+					}, {
+						field : 'taskTitle',
+						title : '翻转名称',
+						
+					}, {
+						field : 'mygrade',
+						title : '个人得分',
+						
+					}, {
+						field : 'minGrade',
+						title : '班级最低分',
+						
+					}, {
+						field : 'maxGrade',
+						title : '班级最高分',
+						
+					}]
+						
+				});
+			};
+			function TableInit4(tableid){
+				$table = $('#'+tableid).bootstrapTable({
+					method : 'get',
+					url : "${pageContext.request.contextPath}/student/ajaxGetStudentTaskListPage?taskCategory=work",//请求路径
+					dataType : "json",
+					striped : true, //是否显示行间隔色
+					pageNumber : 1, //初始化加载第一页
+					pagination : true,//是否分页
+					striped: true,  //是否显示行间隔色
+					sidePagination : 'client',//server:服务器端分页|client：前端分页
+					pageSize : 5,//单页记录数
+					pageList : [ 5, 10, 20, 30 ],//可选择单页记录数
+					showRefresh : false,//刷新按钮
+					clickToSelect: true,                //是否启用点击选中行
+					singleSelect  : true,
+					queryParams : function(params) {//上传服务器的参数
+						var temp = {//如果是在服务器端实现分页，limit、offset这两个参数是必须的
+							limit : params.limit, // 每页显示数量
+							offset : params.offset // SQL语句起始索引
+							//page : (params.offset / params.limit) + 1, //当前页码 
+							/* Name : $('#search_name').val(),
+							Tel : $('#search_tel').val() */
+						};
+						return temp;
+					},
+					columns : [{
+						field : 'taskId',
+						title : '序号',
+						formatter: function (value, row, index) {
+				            var pageSize = $('#'+tableid).bootstrapTable('getOptions').pageSize;     //通过table的#id 得到每页多少条
+				            var pageNumber = $('#'+tableid).bootstrapTable('getOptions').pageNumber; //通过table的#id 得到当前第几页
+				            return pageSize * (pageNumber - 1) + index + 1;    // 返回每条的序号： 每页条数 *（当前页 - 1 ）+ 序号
+				        }
+					
+					}, {
+						field : 'taskTitle',
+						title : '课设名称',
 						
 					}, {
 						field : 'mygrade',
@@ -85,7 +247,7 @@
 			}else if(stats=="none"){
 				$("#workTaskList").css("display","block");
 			}
-			TableInit("workTaskListTable");
+			TableInit1("workTaskListTable");
 			$('#workTaskListTable').bootstrapTable(
 					'refresh', 
 					{url : "${pageContext.request.contextPath}/student/ajaxGetStudentTaskListPage?taskCategory=work"
@@ -98,7 +260,7 @@
 			}else if(stats=="none"){
 				$("#trialTaskList").css("display","block");
 			}
-			TableInit("trialTaskListTable");
+			TableInit2("trialTaskListTable");
 			$('#trialTaskListTable').bootstrapTable(
 					'refresh', 
 					{url : "${pageContext.request.contextPath}/student/ajaxGetStudentTaskListPage?taskCategory=trial"
@@ -111,7 +273,7 @@
 			}else if(stats=="none"){
 				$("#turnClassTaskList").css("display","block");
 			}
-			TableInit("turnClassTaskListTable");
+			TableInit3("turnClassTaskListTable");
 			$('#turnClassTaskListTable').bootstrapTable(
 					'refresh', 
 					{url : "${pageContext.request.contextPath}/student/ajaxGetStudentTaskListPage?taskCategory=turn_class"
@@ -124,7 +286,7 @@
 			}else if(stats=="none"){
 				$("#courseDesignTaskList").css("display","block");
 			}
-			TableInit("courseDesignTaskListTable");
+			TableInit4("courseDesignTaskListTable");
 			$('#courseDesignTaskListTable').bootstrapTable(
 					'refresh', 
 					{url : "${pageContext.request.contextPath}/student/ajaxGetStudentTaskListPage?taskCategory=course_design"
