@@ -288,7 +288,7 @@ public class TeacherController {
 	    } 
 
 	    
-	    return "jsp/jsptest/course_detail";
+	    return "jsp/Teacher/course_detail";
 	  }
 
 

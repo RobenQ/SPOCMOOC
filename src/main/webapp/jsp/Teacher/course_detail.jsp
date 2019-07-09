@@ -6,20 +6,14 @@
 			+ path + "/";
 %>
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8" name="viewport"
-	content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<!-- saved from url=(0086)${pageContext.request.contextPath}/teacher/toCourseDetail/3334C5DC8CE2451AA5B8B1C78EFBA204 -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <title>${course. courseName}</title>
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/bootstrap.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/scaffolding.less">
-<link
-	href="${pageContext.request.contextPath}/css/achievement/achievementMain.css"
-	rel="stylesheet" />
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/course3.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/scaffolding.less">
+<link href="${pageContext.request.contextPath}/css/achievement/achievementDetail.css" rel="stylesheet">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/course3.css">
 <script src="${pageContext.request.contextPath}/js/jquery-3.2.1.js"></script>
 </head>
 <body>
@@ -69,7 +63,7 @@
 
 	<script type="text/javascript">
 		function attention() {
-			//alert('${course.courseId}');
+			//alert('3334C5DC8CE2451AA5B8B1C78EFBA204');
 			$
 					.ajax({
 						async : false,
@@ -91,25 +85,311 @@
 					});
 		}
 	</script>
-	<jsp:include page="/jsp/top.jsp" flush="true" />
+    <style>
+    header{
+    width: 100%;
+    height: 143px;
+    background-size: cover;
+    position: relative;
+}
+li{
+	list-style: none;
+}
+/*---------------登录------------------*/
+header span{
+    width: 39%;
+    float: right;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 1%;
+}
+header span li{
+    width: 51px;
+    float: left;
+    color: white;
+    margin-right: 1%;
+    margin-left:1%;
+    line-height: 30px;
+}
+header span li a{
+    color: white;
+    
+}
+header span li:nth-child(1){
+    position: relative;
+}
+.erweima{
+    width: 130px;
+    position: absolute;
+    padding: 1%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    display: none;
+    z-index: 1;
+}
+.li1:hover .erweima{
+    display: block;
+}
+.spanLi2{
+	width: 130px;
+    position: absolute;
+    padding: 1%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    left: 963px;
+    top: 29px;
+    display: none;
+    z-index: 1;
+}
+.spanLi2 li{
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+}
+.m:hover .spanLi2{
+    display: block;
+}
+header span li a:hover{
+    text-decoration: underline;
+}
+header span li:nth-child(5){
+    position: relative;
+}
+
+
+/*--------------导航---------------*/
+header nav {
+    width: 49%;
+    float: right;
+    line-height: 30px;
+    right: -3%;
+    bottom: 15%;
+    position: absolute;
+   
+}
+header nav li{
+    float: left;
+    margin-left: 0;
+    margin-right: 1%;
+    width: 13%;
+    text-align: center;
+    border-radius: 3px;
+        height: 34px;
+    padding-top: 2px;
+}
+header nav li a:hover{
+    color: blue;
+}
+header nav li a{
+    color: white;
+}
+.li3{
+	float: left;
+    margin-left: 0;
+    margin-right: 4%;
+    background: #fff;
+    width: 10%;
+    text-align: center;
+    border-radius: 3px;
+        height: 34px;
+    padding-top: 2px;
+}
+.li3 a{
+	    color: #015293;
+}
+.main_t{
+	background: url(${pageContext.request.contextPath}/jsp/jsptestmain_t.jpg) no-repeat;
+}
+/*----------------资源----------------*/
+.main_b_m_t h3{
+	margin-left: 10px;
+}
+.Teaching_plan_bank{
+	background: linear-gradient(#FC9033,#FB5130);
+	width: 320px;
+	height: 150px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	margin-left: 35px;
+	margin-right:0;
+	float: left;
+	border-radius: 1px;
+}
+.Teaching_plan_bank:hover{
+	box-shadow: 0 0 15px grey;
+	transform: translate(0, -10px);
+}
+.Teaching_Resources{
+	background: linear-gradient(#20ABFA,#3070ED);
+	width: 320px;
+	height: 150px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	margin-left: 25px;
+	margin-right: 0;
+	float: left;
+	border-radius: 1px;
+}
+.Teaching_Resources:hover{
+	box-shadow: 0 0 15px grey;
+	transform: translate(0, -10px);
+}
+.Multimedia_Resource_Base{
+	background: linear-gradient(#7ECEC7,#52A9C2);
+	width: 320px;
+	height: 150px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	margin-left: 25px;
+	margin-right: 0;
+	float: left;
+	border-radius: 1px;
+}
+.Multimedia_Resource_Base:hover{
+	box-shadow: 0 0 15px grey;
+	transform: translate(0, -10px);
+}
+.task_library{
+	background: linear-gradient(#BFD1AD,#BFD1AD);
+	width: 320px;
+	height: 150px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	margin-left: 35px;
+	margin-right:0;
+	float: left;
+	border-radius: 1px;
+}
+.task_library:hover{
+	box-shadow: 0 0 15px grey;
+	transform: translate(0, -10px);
+}
+.Laboratory_Library{
+	background: linear-gradient(#ED6EA0,#FF0060);
+	width: 320px;
+	height: 150px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	margin-left: 25px;
+	margin-right: 0;
+	float: left;
+	border-radius: 1px;
+}
+.Laboratory_Library:hover{
+	box-shadow: 0 0 15px grey;
+	transform: translate(0, -10px);
+}
+.Course_Design_Library{
+	background: linear-gradient(#BF71ED,#8473EF);
+	width: 320px;
+	height: 150px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	margin-left: 25px;
+	margin-right: 0;
+	float: left;
+	border-radius: 1px;
+}
+.Course_Design_Library:hover{
+	box-shadow: 0 0 15px grey;
+	transform: translate(0, -10px);
+}
+.main_b_m_t .resourcetype{
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 40px;
+}
+.main_b_m_t .resourcecount{
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	margin-top: 20px;
+}
+    </style>
+    <script src="${pageContext.request.contextPath}/js/jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            var order=1;
+            window.setInterval(lunbo,1000);
+            function lunbo(){
+                if(order==4){
+                    order=0;
+                }
+                $(".banner-img img").eq(order).css("display","block").siblings().css("display","none");
+                $(".square .square1").eq(order).css("background-color","#FF6600").siblings().css("background-color","white");
+                order++;
+            }
+        });
+    </script>
+    <script>
+     function dianji(ob){
+    	 var topFlag = $(ob).attr("id");
+    	 HttpServletRequest.getSession().setAttribute('topFlag', topFlag);
+     };
+    </script>
+
+
+	<div style="width: 100%;height: 143px;background-size: cover;">
+      <header style="
+      	background: url(&#39;${pageContext.request.contextPath}/images/head.png&#39;) no-repeat;
+      	background: url(${pageContext.request.contextPath}/images/head.png) no-repeat;
+      webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+   background-size: cover;">
+   		
+          <span style=" padding-left: 20%">
+         
+         
+         
+              <li class="li1"><a href="${pageContext.request.contextPath}/teacher/toCourseDetail/3334C5DC8CE2451AA5B8B1C78EFBA204">微信端</a>
+                  <div class="erweima">
+                      <img src="${pageContext.request.contextPath}/images/erweima.png" alt="">
+                  </div>
+              </li>
+              <li>|</li>
+              
+              <li><a href="${pageContext.request.contextPath}/jsp/Teacher/index.jsp">登录</a></li>
+              <div class="spanLi2">
+                      <ul>
+                       	<li><a href="${pageContext.request.contextPath}/teacher/toCourseDetail/3334C5DC8CE2451AA5B8B1C78EFBA204">我的作品</a></li>
+                        <li><a href="${pageContext.request.contextPath}/teacher/toCourseDetail/3334C5DC8CE2451AA5B8B1C78EFBA204">我的课程</a></li>
+                        <li><a href="${pageContext.request.contextPath}/teacher/toCourseDetail/3334C5DC8CE2451AA5B8B1C78EFBA204">我的班级</a></li>
+                        <li><a href="${pageContext.request.contextPath}/teacher/toCourseDetail/3334C5DC8CE2451AA5B8B1C78EFBA204">我的主页</a></li>
+                      </ul>
+                  </div>
+             </span>
+          <!--导航-->
+          <nav style="width: 55%;">
+              <ul>
+                  <li class="li2" style="font-size: 18px;width: 10%;"><a href="${pageContext.request.contextPath}/main/toMain" onclick="dianji(this)">首页</a></li>
+                
+                  <li class="li2" style="font-size: 18px;width: 10%;"><a href="${pageContext.request.contextPath}/teacher/courseList" onclick="dianji(this)">课程</a></li> 
+                  
+                  
+             <li class="li2" style="font-size: 18px;width: 10%;"><a href="${pageContext.request.contextPath}/teacher/toCourseDetail/3334C5DC8CE2451AA5B8B1C78EFBA204">互助</a></li> 
+                  <!--  <li class="li3"><a href="">互助</a></li> -->
+                  
+                   <li class="li2" style="font-size: 18px;"><a href="${pageContext.request.contextPath}/achievement/toAchievementMainPage">学生成果</a></li>
+                  
+                  
+                 <li class="li2" style="font-size: 18px;"><a href="${pageContext.request.contextPath}/achievement/toIURPMainPage">产学研项目</a></li>
+                  
+                  
+              <li class="li2" style="font-size: 18px;"><a href="${pageContext.request.contextPath}/turnClass/toTurnClassMainPage">课堂翻转</a></li> 
+	              <li class="li2" style="font-size: 18px;"><a href="${pageContext.request.contextPath}/jsp/Teacher/index.jsp">个人中心</a></li>
+              </ul>
+          </nav>
+      </header>
+      </div>
 	<main>
 	<div class="main_t">
 		<div class="container-fluid">
-			<c:if test="${ attention != 2 }">
-				<button type="button" class="btn btn-default" id="attention"
-					onclick="attention()">关注</button>
-			</c:if>
-			<c:if test="${ attention == 2 }">
-				<button type="button" class="btn btn-default" id="attention"
-					onclick="attention()">已关注</button>
-			</c:if>
+			
+				<button type="button" class="btn btn-default" id="attention" onclick="attention()">关注</button>
+			
+			
 			<h1>${course. courseName}</h1>
-			<c:if test="${course.fine != null && course.fine != '' }">
-				<div
-					style="color: red; position: relative; left: 10%; height: 50px; float: left;">
-					<span>${course.fine }</span>
-				</div>
-			</c:if>
+			
 			<p>类别：${category}系&nbsp;&nbsp;&nbsp;
 				参与人数：${course.courseStudentNum }
 				&nbsp;&nbsp;&nbsp;创课时间：${publishTime }</p>
@@ -120,18 +400,11 @@
 		<div class="main_b_t">
 			<nav>
 				<ul style="margin-top: 25px; margin-left: -14px;">
-					<li style="float: left; margin-right: 25px"><a
-						style="font-size: 22px;" href="#">课程介绍</a></li>
-					<li style="float: left; margin-right: 25px"><a
-						style="font-size: 22px;"
-						href="${pageContext.request.contextPath}/teacher/toCourseResource/0">资源</a></li>
-					<li style="float: left; margin-right: 25px; font-size: 22px;"><a
-						href="${pageContext.request.contextPath}/turnClass/toTurnClassMainPage">翻转课堂</a>
-					<li style="float: left; margin-right: 25px"><a
-						style="font-size: 22px;" href="">挑战</a></li>
-					<li style="float: left; margin-right: 25px; margin-bottom: 2%;"><a
-						style="font-size: 22px;"
-						href="${pageContext.request.contextPath}/achievement/selectCategory?category=CourseExpand">课程成果</a></li>
+					<li style="float: left; margin-right: 25px"><a style="font-size: 22px;" href="${pageContext.request.contextPath}/teacher/toCourseDetail/3334C5DC8CE2451AA5B8B1C78EFBA204#">课程介绍</a></li>
+					<li style="float: left; margin-right: 25px"><a style="font-size: 22px;" href="${pageContext.request.contextPath}/teacher/toCourseResource/0">资源</a></li>
+					<li style="float: left; margin-right: 25px; font-size: 22px;"><a href="${pageContext.request.contextPath}/turnClass/toTurnClassMainPage">翻转课堂</a>
+					</li><li style="float: left; margin-right: 25px"><a style="font-size: 22px;" href="${pageContext.request.contextPath}/teacher/toCourseDetail/3334C5DC8CE2451AA5B8B1C78EFBA204">挑战</a></li>
+					<li style="float: left; margin-right: 25px; margin-bottom: 2%;"><a style="font-size: 22px;" href="${pageContext.request.contextPath}/achievement/selectCategory?category=CourseExpand">课程成果</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -145,27 +418,6 @@
 					<iframe style="margin-left: 12px; margin-top: -2px;"
 						src="${pageContext.request.contextPath}/teacher/toCourseIntroduceFrame/${course.courseId }"
 						frameborder="0" width="97%" height="100%" scrolling="auto"></iframe>
-					<!-- <h3>大纲</h3>
-                <p class="inner">
-                    第1部分 线性数据结构 <br>
-                    该部分训练对线性结构实现方法，涉及线性表、队列、栈。<br>
-                    <br>
-                    1-1  数据结构与算法 - 线性表 <br>
-                    1-2  数据结构与算法 - 队列 <br>
-                    1-3  数据结构与算法 - 栈 <br>
-                    第2部分 线性结构的应用 <br>
-                    该部分训练线性结构在典型问题中应用，以及针对线性结构的排序和查找算法。 <br>
-                    <br>
-                    2-1  数据结构与算法 - 计算表达式 <br>
-                    2-2  数据结构与算法 - 字符串匹配 <br>
-                    2-3  数据结构与算法 - 排序 <br>
-                    2-4  数据结构与算法 - 查找 <br>
-                    第3部分 树和图 <br>
-                    该部分训练对树形数据结构和图数据结构的掌握。 <br>
-                    <br>
-                    3-1  数据结构与算法 - 树 <br>
-                    3-2  数据结构与算法 - 图 <br>
-                </p> -->
 				</div>
 				<div class="container_right">
 					<h3>教师团队</h3>
@@ -176,426 +428,136 @@
 				</div>
 			</div>
 		</div>
-		<c:if test="${taskList != null || resource != null }">
+		
 			<div class="main_b_m">
-				<div class="container" style="height: 494px;">
-					<div class="main_b_t">
-						<nav>
-							<ul style="margin-top: 25px; margin-left: 38px;">
-								<li style="float: left; margin-right: 25px"><a
-									style="font-size: 22px;"
-									href="${pageContext.request.contextPath}/teacher/toCourseResourceFrame/6/${course.courseId }"
-									target="target">教案库</a></li>
-								<li style="float: left; margin-right: 25px"><a
-									style="font-size: 22px;"
-									href="${pageContext.request.contextPath}/teacher/toCourseResourceFrame/7/${course.courseId }"
-									target="target">教学资源库</a></li>
-								<li style="float: left; margin-right: 25px"><a
-									style="font-size: 22px;"
-									href="${pageContext.request.contextPath}/teacher/toCourseResourceFrame/5/${course.courseId }"
-									target="target">多媒体资源库</a>
-								<li style="float: left; margin-right: 25px"><a
-									style="font-size: 22px;"
-									href="${pageContext.request.contextPath}/teacher/toCourseResourceFrame/8/${course.courseId }"
-									target="target">作业库</a></li>
-								<li style="float: left; margin-right: 25px"><a
-									style="font-size: 22px;"
-									href="${pageContext.request.contextPath}/teacher/toCourseResourceFrame/9/${course.courseId }"
-									target="target">实验库</a></li>
-								<li style="float: left; margin-right: 25px"><a
-									style="font-size: 22px;"
-									href="${pageContext.request.contextPath}/teacher/toCourseResourceFrame/10/${course.courseId }"
-									target="target">课程设计库</a></li>
-							</ul>
-						</nav>
+				<div class="container" style="height: 454px;">
+					<div class="main_b_m_t">
+						<h3>资源</h3>
+						<a target="_blank"  href='${pageContext.request.contextPath}/teacher/toCourseResource/6'>
+						<div class="Teaching_plan_bank">
+							<p class="resourcetype">教案库</p>
+							<p class="resourcecount">共${teaching_planNum }份教案</p>
+						</div>
+						</a>
+						<a target="_blank"  href='${pageContext.request.contextPath}/teacher/toCourseResource/7'>
+						<div class="Teaching_Resources">
+							<p class="resourcetype">教学资源库</p>
+							<p class="resourcecount">共${teaching_resourseNum }份教学资源</p>
+						</div>
+						</a>
+						<a target="_blank"  href='${pageContext.request.contextPath}/teacher/toCourseResource/5'>
+						<div class="Multimedia_Resource_Base">
+							<p class="resourcetype">多媒体资源库</p>
+							<p class="resourcecount">共${mediaRListNum}份多媒体资源</p>
+						</div>
+						</a>
+						<a target="_blank"  href='${pageContext.request.contextPath}/teacher/toCourseResource/8'>
+						<div class="task_library">
+							<p class="resourcetype">作业库</p>
+							<p class="resourcecount">共${taskListNum}份作业</p>
+						</div>
+						</a>
+						<a target="_blank"  href='${pageContext.request.contextPath}/teacher/toCourseResource/9'>
+						<div class="Laboratory_Library">
+							<p class="resourcetype">实验库</p>
+							<p class="resourcecount">共${trialListNum }份实验</p>
+						</div>
+						</a>
+						<a target="_blank"  href='${pageContext.request.contextPath}/teacher/toCourseResource/10'>
+						<div class="Course_Design_Library">
+							<p class="resourcetype">课程设计库</p>
+							<p class="resourcecount">共${curriculum_designNum }份课程设计</p>
+						</div>
+						</a>
 					</div>
 					<div style="clear: both;"></div>
-					<div style="width: 100%; height: 379px;">
-						<iframe style="margin-left: 12px; margin-top: -2px;"
-							src="${pageContext.request.contextPath}/teacher/toCourseResourceFrame/8/${course.courseId }"
-							name="target" frameborder="0" width="93%" height="110%"
-							scrolling="auto"></iframe>
-					</div>
-					<%--<div class="brother">
-				<a href="#">更多</a>
-				<h3>教案库</h3>
-				
-				<p>1、JAVA语言概述与开发环境的搭建</p>
-				<p>2、简单的JAVA程序</p>
-				<p>3、数据运算、流控制和数组</p>
-				<p>4、类、包和接口</p>
-			</div>
-			<div class="brother">
-				<a href="#">更多</a>
-				<h3>实验库</h3>
-				<p>1、创建java Application和 java Applet程序</p>
-				<p>2、类的继承</p>
-				<p>3、接口的应用</p>
-				<p>4、熟练掌握多线程</p>
-			</div>
-			<div class="brother">
-				<a href='${pageContext.request.contextPath}/teacher/toCourseResource/4'>更多</a>
-				<h3>作业库</h3>
-				<c:forEach items ="${taskList}" varStatus="status" var = "task"  begin="0" end ="4">
-					<p>${requestScope.offset+status.index +1}、${task.taskTitle }</p>
-				</c:forEach>
-				<!-- <h3>作业库</h3>
-				<p>1、创建第一个java 程序 Hello World</p>
-				<p>2、练习数据类型转换</p>
-				<p>3、熟练掌握类的继承</p>
-				<p>4、用类实现求两点间的距离</p> -->
-			</div>
-			<div class="brother">
-				<a href='${pageContext.request.contextPath}/teacher/toCourseResource/3'>更多</a>
-				<h3>多媒体库</h3>
-				<c:forEach items ="${resource}" varStatus="status" var = "re"  begin="0" end ="4">
-					<p>${requestScope.offset+status.index +1}、${re.resourceName }</p>
-				</c:forEach>
-				<!-- 
-				<p>2、简单的JAVA程序视频演示</p>
-				<p>3、数据运算、流控制和数组视频教程</p>
-				<p>4、类的使用视频教程</p> -->
-			</div>
-			<div class="brother">
-				<a href="#">更多</a>
-				<h3>课设库</h3>
-				<p>1、图书信息管理系统</p>
-				<p>2、简单小游戏</p>
-				<p>3、记事本</p>
-				<p>4、员工信息管理系统</p>
-			</div>
-			<div class="brother">
-				<a href="#">更多</a>
-				<h3>教学资源库</h3>
-				<p>1、JAVA语言概述与开发环境的搭建</p>
-				<p>2、简单的JAVA程序</p>
-				<p>3、数据运算、流控制和数组</p>
-				<p>4、类、包和接口</p>
-			</div>--%>
+					
 				</div>
 			</div>
-		</c:if>
-		<c:if test="${turnClass != null }">
-			<div class="main_b_b">
-				<div class="container"
-					style="min-height: 412px; height: auto; padding-right: 73px;">
-					<h3 style="margin-left: 24px; font-weight: 600; font-size: 28px;">翻转课堂</h3>
-					<ul>
-						<div class="row">
-							<div class="col-xs-4 col-md-4 " style="height: auto;">
-								<li class="xiangmu-out"
-									style="float: left; margin-left: 23px; margin-top: 11px; border: 1px solid #dcdcdc;">
-									<div
-										style="height: 151px; width: 320px; padding-left: 19px; padding-top: 15px;">
-										<div
-											style="float: left; height: 27px; width: 67px; position: relative; top: -9px; left: -13px; padding-left: 12px; padding-top: 3px; background: #f1ad4e; font-weight: 600; color: #fff; border-radius: 3px;">软件类</div>
-										<div>
-											<span
-												style="font-weight: 500; font-size: 20px; position: relative; left: 25px; top: -7px;">Java
-												实验一</span>
-										</div>
-										<div style="clear: both;"></div>
-										<div style="height: 52px;">
-											<span style="font-weight: 300px;">任务简介：</span>java类的继承
-										</div>
-										<div
-											style="float: left; width: 20px; height: 20px; position: relative; top: -3px; left: -6px; padding-bottom: 2px;">
-											<img
-												src="${pageContext.request.contextPath}/images/position.png"
-												style="width: 100%" ;height="100%" />
-										</div>
-										<div style="margin-bottom: 6px; color: #fea552">1029391、1029348班</div>
-										<div style="float: left; margin-right: 139px;">发布人：xxxx</div>
-										<div>2019-8-8</div>
+    <style>
+    	footer{
+    width: 100%;
+    background: #333333;
+    float:left;
+    height: 271.88px;
+    margin-top: 38px;
+}
+footer .footer-img{
+    width: 130px;
+    height: 130px;
+    padding: 5px;
+    background: white;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+footer nav{
+    width: 90%;
+    height: 60px;
+    margin-top: 2%;
+    margin-left: 15%;
+}
+footer nav li{
+    float: left;
+    width: 11%;
+    line-height: 30px;
+}
+footer nav li a{
+    color: white;
+}
+footer nav li a:hover{
+    color: blue;
+}
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+ul li a{
+    text-decoration: none;
+    
+}
+li{
+    list-style: none;
+}
+.clear{
+    clear: both;
+}
+    </style>
+    
+    <script src="${pageContext.request.contextPath}/js/jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            var order=1;
+            window.setInterval(lunbo,1000);
+            function lunbo(){ 
+                if(order==4){
+                    order=0;
+                }
+                $(".banner-img img").eq(order).css("display","block").siblings().css("display","none");
+                $(".square .square1").eq(order).css("background-color","#FF6600").siblings().css("background-color","white");
+                order++;
+            }
+        });
+    </script>
 
-									</div>
-								</li>
-							</div>
-							<div class="col-xs-4 col-md-4 " style="height: auto;">
-								<li class="xiangmu-out"
-									style="float: left; margin-left: 23px; margin-top: 11px; border: 1px solid #dcdcdc;">
-									<div
-										style="height: 151px; width: 320px; padding-left: 19px; padding-top: 15px;">
-										<div
-											style="float: left; height: 27px; width: 67px; position: relative; top: -9px; left: -13px; padding-left: 12px; padding-top: 3px; background: #f1ad4e; font-weight: 600; color: #fff; border-radius: 3px;">软件类</div>
-										<div>
-											<span
-												style="font-weight: 500; font-size: 20px; position: relative; left: 25px; top: -7px;">Java
-												实验一</span>
-										</div>
-										<div style="clear: both;"></div>
-										<div style="height: 52px;">
-											<span style="font-weight: 300px;">任务简介：</span>java类的继承
-										</div>
-										<div
-											style="float: left; width: 20px; height: 20px; position: relative; top: -3px; left: -6px; padding-bottom: 2px;">
-											<img
-												src="${pageContext.request.contextPath}/images/position.png"
-												style="width: 100%" ;height="100%" />
-										</div>
-										<div style="margin-bottom: 6px; color: #fea552">1029391、1029348班</div>
-										<div style="float: left; margin-right: 139px;">发布人：xxxx</div>
-										<div>2019-8-8</div>
 
-									</div>
-								</li>
-							</div>
-							<div class="col-xs-4 col-md-4 " style="height: auto;">
-								<li class="xiangmu-out"
-									style="float: left; margin-left: 23px; margin-top: 11px; border: 1px solid #dcdcdc;">
-									<div
-										style="height: 151px; width: 320px; padding-left: 19px; padding-top: 15px;">
-										<div
-											style="float: left; height: 27px; width: 67px; position: relative; top: -9px; left: -13px; padding-left: 12px; padding-top: 3px; background: #f1ad4e; font-weight: 600; color: #fff; border-radius: 3px;">软件类</div>
-										<div>
-											<span
-												style="font-weight: 500; font-size: 20px; position: relative; left: 25px; top: -7px;">Java
-												实验一</span>
-										</div>
-										<div style="clear: both;"></div>
-										<div style="height: 52px;">
-											<span style="font-weight: 300px;">任务简介：</span>java类的继承
-										</div>
-										<div
-											style="float: left; width: 20px; height: 20px; position: relative; top: -3px; left: -6px; padding-bottom: 2px;">
-											<img
-												src="${pageContext.request.contextPath}/images/position.png"
-												style="width: 100%" ;height="100%" />
-										</div>
-										<div style="margin-bottom: 6px; color: #fea552">1029391、1029348班</div>
-										<div style="float: left; margin-right: 139px;">发布人：xxxx</div>
-										<div>2019-8-8</div>
 
-									</div>
-								</li>
-							</div>
-							<div class="col-xs-4 col-md-4 " style="height: auto;">
-								<li class="xiangmu-out"
-									style="float: left; margin-left: 23px; margin-top: 11px; border: 1px solid #dcdcdc;">
-									<div
-										style="height: 151px; width: 320px; padding-left: 19px; padding-top: 15px;">
-										<div
-											style="float: left; height: 27px; width: 67px; position: relative; top: -9px; left: -13px; padding-left: 12px; padding-top: 3px; background: #f1ad4e; font-weight: 600; color: #fff; border-radius: 3px;">软件类</div>
-										<div>
-											<span
-												style="font-weight: 500; font-size: 20px; position: relative; left: 25px; top: -7px;">Java
-												实验一</span>
-										</div>
-										<div style="clear: both;"></div>
-										<div style="height: 52px;">
-											<span style="font-weight: 300px;">任务简介：</span>java类的继承
-										</div>
-										<div
-											style="float: left; width: 20px; height: 20px; position: relative; top: -3px; left: -6px; padding-bottom: 2px;">
-											<img
-												src="${pageContext.request.contextPath}/images/position.png"
-												style="width: 100%" ;height="100%" />
-										</div>
-										<div style="margin-bottom: 6px; color: #fea552">1029391、1029348班</div>
-										<div style="float: left; margin-right: 139px;">发布人：xxxx</div>
-										<div>2019-8-8</div>
-
-									</div>
-								</li>
-							</div>
-							<div class="col-xs-4 col-md-4 " style="height: auto;">
-								<li class="xiangmu-out"
-									style="float: left; margin-left: 23px; margin-top: 11px; border: 1px solid #dcdcdc;">
-									<div
-										style="height: 151px; width: 320px; padding-left: 19px; padding-top: 15px;">
-										<div
-											style="float: left; height: 27px; width: 67px; position: relative; top: -9px; left: -13px; padding-left: 12px; padding-top: 3px; background: #f1ad4e; font-weight: 600; color: #fff; border-radius: 3px;">软件类</div>
-										<div>
-											<span
-												style="font-weight: 500; font-size: 20px; position: relative; left: 25px; top: -7px;">Java
-												实验一</span>
-										</div>
-										<div style="clear: both;"></div>
-										<div style="height: 52px;">
-											<span style="font-weight: 300px;">任务简介：</span>java类的继承
-										</div>
-										<div
-											style="float: left; width: 20px; height: 20px; position: relative; top: -3px; left: -6px; padding-bottom: 2px;">
-											<img
-												src="${pageContext.request.contextPath}/images/position.png"
-												style="width: 100%" ;height="100%" />
-										</div>
-										<div style="margin-bottom: 6px; color: #fea552">1029391、1029348班</div>
-										<div style="float: left; margin-right: 139px;">发布人：xxxx</div>
-										<div>2019-8-8</div>
-
-									</div>
-								</li>
-							</div>
-							<div class="col-xs-4 col-md-4 " style="height: auto;">
-								<li class="xiangmu-out"
-									style="float: left; margin-left: 23px; margin-top: 11px; border: 1px solid #dcdcdc;">
-									<div
-										style="height: 151px; width: 320px; padding-left: 19px; padding-top: 15px;">
-										<div
-											style="float: left; height: 27px; width: 67px; position: relative; top: -9px; left: -13px; padding-left: 12px; padding-top: 3px; background: #f1ad4e; font-weight: 600; color: #fff; border-radius: 3px;">软件类</div>
-										<div>
-											<span
-												style="font-weight: 500; font-size: 20px; position: relative; left: 25px; top: -7px;">Java
-												实验一</span>
-										</div>
-										<div style="clear: both;"></div>
-										<div style="height: 52px;">
-											<span style="font-weight: 300px;">任务简介：</span>java类的继承
-										</div>
-										<div
-											style="float: left; width: 20px; height: 20px; position: relative; top: -3px; left: -6px; padding-bottom: 2px;">
-											<img
-												src="${pageContext.request.contextPath}/images/position.png"
-												style="width: 100%" ;height="100%" />
-										</div>
-										<div style="margin-bottom: 6px; color: #fea552">1029391、1029348班</div>
-										<div style="float: left; margin-right: 139px;">发布人：xxxx</div>
-										<div>2019-8-8</div>
-
-									</div>
-								</li>
-							</div>
-						</div>
-					</ul>
-				</div>
-			</div>
-		</c:if>
-
-		<!-- <div class="main_b_b">
-		<div class="container" style="min-height: 350px;height: auto;">
-			<h3 style="margin-left: 24px;font-weight: 600;font-size: 28px;">挑战</h3>
-			<ul>
-	<li style="float: left; margin-left: 25px;margin-top: 18px;">
-		<div style="  height: 151px;width: 171px;padding-left: 30px;padding-top: 15px;">
-			<div style="background: blue; text-align: center;border-radius: 75px;height: 75px;width: 75px;
-			position: relative;left: 10px;margin-bottom: 10px;">
-				
-			</div>
-			
-			<div>134323454 xxxx</div>
-			<div>经验值：1000</div>
-			
-		</div>
-	</li>
-	<li style="float: left; margin-left: 25px;margin-top: 18px;">
-		<div style="  height: 151px;width: 171px;padding-left: 30px;padding-top: 15px;">
-			<div style="background: blue; text-align: center;border-radius: 75px;height: 75px;width: 75px;
-			position: relative;left: 10px;margin-bottom: 10px;">
-				
-			</div>
-			
-			<div>134323454 xxxx</div>
-			<div>经验值：1000</div>
-			
-		</div>
-	</li>
-	<li style="float: left; margin-left: 25px;margin-top: 18px;">
-		<div style="  height: 151px;width: 171px;padding-left: 30px;padding-top: 15px;">
-			<div style="background: blue; text-align: center;border-radius: 75px;height: 75px;width: 75px;
-			position: relative;left: 10px;margin-bottom: 10px;">
-				
-			</div>
-			
-			<div>134323454 xxxx</div>
-			<div>经验值：1000</div>
-			
-		</div>
-	</li>
-	<li style="float: left; margin-left: 25px;margin-top: 18px;">
-		<div style="  height: 151px;width: 171px;padding-left: 30px;padding-top: 15px;">
-			<div style="background: blue; text-align: center;border-radius: 75px;height: 75px;width: 75px;
-			position: relative;left: 10px;margin-bottom: 10px;">
-			</div>
-			
-			<div>134323454 xxxx</div>
-			<div>经验值：1000</div>
-			
-		</div>
-	</li>
-	<li style="float: left; margin-left: 25px;margin-top: 18px;">
-		<div style="  height: 151px;width: 171px;padding-left: 30px;padding-top: 15px;">
-			<div style="background: blue; text-align: center;border-radius: 75px;height: 75px;width: 75px;
-			position: relative;left: 10px;margin-bottom: 10px;">
-				
-			</div>
-			
-			<div>134323454 xxxx</div>
-			<div>经验值：1000</div>
-			
-		</div>
-	</li>
-	
-	
-</ul>
-</div>
-</div> -->
-		<c:if test="${aocscList != null }">
-			<div class="main_b_b">
-				<div class="container" style="min-height: 350px; height: auto;">
-					<h3 style="margin-left: 24px; font-weight: 600; font-size: 28px;">课程成果</h3>
-					<%-- <a
-							href="${pageContext.request.contextPath}/achievement/toDetailAOCSC?achievementId=${item.achievementId }">
-							<div class="chengguo-out col-md-4"
-								style="padding: 8px; height: 350px; margin-top: 1%;">
-								<div class="doorPlank"
-									style="padding: 2.5rem; background-color: white; height: 100%">
-									<div class="rel-img">
-										<img src="${pageContext.request.contextPath}/img/fire.png"
-											style="position: absolute; margin-left: 0; margin-top: 0;">
-										<img alt="" style="width: 100%; height: 150px;"
-											src="${pageContext.request.contextPath}/images/tu1.jpg" />
-									</div>
-									<div class="info" style="width: 100%; height: 80px;">
-										<div class="infoContent">
-											<h3 class="achievementTitle">
-												<b>成果</b>
-											</h3>
-											<p class="description">成果描述</p>
-											<p class="description">
-												<b>XXXXX</b>推荐&nbsp&nbsp<span
-													class="publishTime">发布于：2010-1-1</span>
-											</p>
-											<p class="publishTime" style="float: right; color: gray">浏览量:11</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</a> --%>
-					<c:forEach items="${aocscList }" var="item" varStatus="status">
-						<a
-							href="${pageContext.request.contextPath}/achievement/toDetailCourseExpand?achievementId=${item.achievementId }">
-							<div class="chengguo-out col-md-4"
-								style="padding: 8px; height: 350px; margin-top: 1%;">
-								<div class="doorPlank"
-									style="padding: 2.5rem; background-color: white; height: 100%">
-									<div class="rel-img">
-										<img src="${pageContext.request.contextPath}/img/fire.png"
-											style="position: absolute; margin-left: 0; margin-top: 0;">
-										<img alt="" style="width: 100%; height: 150px;"
-											src="${pageContext.request.contextPath}/images/tu2.jpg" />
-									</div>
-									<div class="info" style="width: 100%; height: 80px;">
-										<div class="infoContent">
-											<h3 class="achievementTitle">
-												<b>${item.achievementName }</b>
-											</h3>
-											<p class="description">${item.introduction }</p>
-											<p class="description">
-												<b>${item.achievementCategory }</b>推荐&nbsp&nbsp<span
-													class="publishTime">发布于：${item.finishTime }</span>
-											</p>
-											<p class="publishTime" style="float: right; color: gray">浏览量:${item.browseVolume }</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</a>
-					</c:forEach>
-
-				</div>
-			</div>
-		</c:if>
-		<jsp:include page="/jsp/footer.jsp" flush="true" />
+      <footer>
+          <div class="footer-img"><img src="${pageContext.request.contextPath}/images/erweima.png" alt=""></div>
+          <div>
+              <hr>
+              <nav>
+                  <ul>
+                      <li><a style="text-decoration: none;" href="${pageContext.request.contextPath}/main/toMain">首页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+                      <li><a style="text-decoration: none;" href="${pageContext.request.contextPath}/teacher/courseList">课程&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+                      <li><a style="text-decoration: none;" href="${pageContext.request.contextPath}/teacher/toCourseDetail/3334C5DC8CE2451AA5B8B1C78EFBA204">讨论区&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+                      <li><a style="text-decoration: none;" href="${pageContext.request.contextPath}/teacher/toCourseDetail/3334C5DC8CE2451AA5B8B1C78EFBA204">学生成果&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+                      <li><a style="text-decoration: none;" href="${pageContext.request.contextPath}/teacher/toCourseDetail/3334C5DC8CE2451AA5B8B1C78EFBA204">产学研项目&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+                      <li><a style="text-decoration: none;" href="${pageContext.request.contextPath}/teacher/toCourseDetail/3334C5DC8CE2451AA5B8B1C78EFBA204">微信端&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+                      <li><a style="text-decoration: none;" href="${pageContext.request.contextPath}/teacher/toCourseDetail/3334C5DC8CE2451AA5B8B1C78EFBA204">联系我们&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+                  </ul>
+              </nav>
+          </div>
+      </footer>
+</div></main>
 </body>
 </html>
