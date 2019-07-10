@@ -3549,6 +3549,13 @@ public class TeacherController {
 			ModelAndView mv = new ModelAndView();
 			String studentId = request.getParameter("studentId");
 			request.getSession().setAttribute("studentId", studentId);
+			try {
+				Student student = studentService.searchStudent(studentId);
+				request.setAttribute("student", student);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			System.out.println(studentId);
 			String virtualClassNum = (String) request.getSession().getAttribute("virtualClassNum");
 			System.out.println(virtualClassNum);

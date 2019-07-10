@@ -68,7 +68,7 @@ a:hover {
 	}
 </script>
 </head>
-<body>
+<body id="body">
 	<jsp:include page="/jsp/top.jsp" flush="true" />
 	<main>
 	<div style="width: 80%; margin-left: 10%">

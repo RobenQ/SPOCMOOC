@@ -605,8 +605,14 @@ public class StudentController {
 		}
 		List<Task>taskList = new ArrayList<Task>();
 		String virtualClassNum = (String) request.getSession().getAttribute("virtualClassNum");
-		System.out.println(virtualClassNum);
 		String studentId = (String) request.getSession().getAttribute("studentId");
+		try {
+			Student student = studentService.searchStudent(studentId);
+			request.setAttribute("student", student);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		taskList = teacherService.getTaskByCategory(virtualClassNum, taskCategory);
 		HashMap<String, Integer>studentGradeMap = new HashMap<String, Integer>();
 		HashMap<String , Integer>maxGrade = new HashMap<String, Integer>();

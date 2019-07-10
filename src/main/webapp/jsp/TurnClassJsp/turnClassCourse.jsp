@@ -80,7 +80,7 @@ a:hover {
 			<c:forEach items="${taskList }" var="item">
 				<div style="background-color: white;width: 32%;float:left;margin-left:1%;margin-top:1%;">
 					<a
-						href="${pageContext.request.contextPath}/turnClass/toTurnClassTeam?taskId=${item.taskId }">
+						href="${pageContext.request.contextPath}/turnClass/toTurnClassTeam?taskId=${item.taskId }" target="_parent">
 						<div clas="col-md-12">
 							<h3 class="text-center">
 								<b>${item.taskTitle }</b>
