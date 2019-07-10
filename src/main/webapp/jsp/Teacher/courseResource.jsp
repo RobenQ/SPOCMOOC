@@ -12,10 +12,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/scaffolding.less">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/course3.css">
-    <script type="text/javascript"
-	src="${pageContext.request.contextPath}/js/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/jsp/jsptest/resource.css">
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-3.2.1.js"></script>
   
-  <style>
+  <!-- <style>
   	.xiangmu-out .rel-img img{
     		width: 100%;
     		height: 100%;
@@ -103,7 +103,7 @@ $(document).ready(function() {
 	} 
 	});
 	
-</script>
+</script> -->
 </head>
 <body>
 <jsp:include page="/jsp/top.jsp" flush="true" />
@@ -164,170 +164,50 @@ $(document).ready(function() {
 			</div>
 </main>
 <div class="main2" style="height: auto;width: auto;min-height: 800px;margin-left: -43px;">
-	
-		<%-- <c:if test="${isTeacher == 1 && resourceName !='全部' }">
-		<div style="float: right;position: relative;left: -10%;">
-			<a href="${pageContext.request.contextPath}/teacher/toPublishResource/${category }/${course.courseId}">
-				<button type="button" class="btn btn-primary">发布资源</button>
-			</a>
-		</div>
-		</c:if> --%>
-	
 	<div class="mian2_content" style="height: auto;width: auto;min-height: 170px;margin-left: 140px;margin-top: 0">
-		<ul style="list-style: none;">
 			<c:if test="${resource != null }">
-			<div class="row">
 			<c:forEach items="${resource }" var="re" varStatus="status">
-			<div class="col-xs-4 col-md-4 " style="height: auto;">
-			<li style="float: left;height: 170px;width: 350px;margin-top: 49px; margin-right: 20px;">
-				<div class="xiangmu-out" style="height: 170px;width: 350px;">
-					 <c:if test="${isTeacher == 1 }">
-						<div id="${re.resourceId }" style="height: 20px; margin:0;width: 20px;position: relative;left: 91%;top: 7%;float:left; cursor: pointer;" onclick="deleteR(this)">
-							<img style="height: 100%;width: 100%" src="${pageContext.request.contextPath}/images/timg.jpg" />
-						</div>
-					</c:if> 
-					<div style="height: 127px;width: 350px;background: #fff;padding-top: 23px;border: 1px solid #dadada; border-bottom: 0">
-						<ul>
-							<li style="text-align: center; font-size: 17px;font-weight: 600;margin-bottom: 7px;">${re.resourceName }</li>
-							<li>
-								<div style="margin-left: 42px;width: 275px;">知识点：${re.resourceDetail }...</div>
-								<div style="margin-left: 12%;">发布人：${re.publisherId }</div>
-								<div style="margin-left: 12%;">类型：多媒体资源</div>
-							</li>
-						</ul>
-					</div>
-					<div style="height: 70px;width: 350px;background: #f0f0f0;padding-top: 9px;border:1px solid #dadada;border-top: 0">
-						<div style="margin-left: 42px;width: 193px;padding-bottom: 8px;float: left;">
-							<div style="width: 100%;padding-bottom: 8px;">${time[status.index] }</div>
-							<div style="width: 100%;">已下载：${re.useNum }</div>
-						</div>
-						<c:if test="${sessionScope.teacher == null }">
-						<div>
-							<a href="${pageContext.request.contextPath}/teacher/toSearchResource/${re.resourceId }"><button type="button" class="btn btn-info" style="margin-top: 9px;">查看资源</button></a>
-						</div>
-						</c:if>
-						<c:if test="${isTeacher == 1 }">
-							<div>
-								<a href="${pageContext.request.contextPath}/teacher/toUpdateResource/${re.resourceId }"><button type="button" class="btn btn-info" style="margin-top: 9px;">修改资源</button></a>
-							</div>
-						</c:if>
-					</div>
-				</div>
-			</li>
-			</div>
-			</c:forEach>
-			</c:if>
-			
-			<c:if test="${taskList != null }">
+			<div class="resource col-md-3" id="resource_L">
+            	<div class="resource_t col-md-12">
+               		<p><span class="glyphicon glyphicon-stop" aria-hidden="true" id="tag"></span>&nbsp;&nbsp;多媒体库</p>    
+            	</div>
+            	<div class="resource_m col-md-12">
+            		<p class="tile">${re.resourceName }</p>
+            		<p class="content"><%-- ${re.resourceDetail } --%>点击查看资源详情...</p> 
+            	</div>
+            	<div class="resource_b col-md-12"> 
+            		<span class="publish col-md-8">发布人：${re.publisherId }&nbsp;&nbsp;&nbsp;&nbsp;${time[status.index] }</span><span class="quote col-md-4">已下载：${task.useNum }</span>
+            	</div>
+        	</div>
+        	</c:forEach>
+		</c:if>
+
+		<c:if test="${taskList != null }">
 			<c:forEach items="${taskList }" var="task" varStatus="status">
-			<div class="col-xs-4 col-md-4 " style="height: auto;">
-			<li style="float: left;height: 170px;width: 350px;margin-top: 49px; margin-right: 20px;">
-				<div class="xiangmu-out" style="height: 170px;width: 350px;">
-					 <c:if test="${isTeacher == 1 }">
-						<div id="${task.taskId }" style="height: 20px; margin:0;width: 20px;position: relative;left: 91%;top: 7%;float:left; cursor: pointer;" onclick="deleteTR(this)">
-							<img style="height: 100%;width: 100%" src="${pageContext.request.contextPath}/images/timg.jpg" />
-						</div>
-					</c:if> 
-					<div style="height: 127px;width: 350px;background: #fff;padding-top: 23px;border: 1px solid #dadada; border-bottom: 0">
-						<ul>
-							<li style="text-align: center; font-size: 17px;font-weight: 600;margin-bottom: 7px;">${task.taskTitle }</li>
-							<li>
-								<div style="margin-left: 42px;width: 275px;">知识点：${task.taskDetail }...</div>
-								<div style="margin-left: 12%;">发布人：${task.publisherId }</div>
-								
-								<div style="margin-left: 12%;">
-								<c:if test="${task.taskType == 'work' }">
-									类型：作业资源
-								</c:if>
-								<c:if test="${task.taskType == 'trial' }">
-									类型：实验资源
-								</c:if>
-								<c:if test="${task.taskType == 'curriculum_design' }">
-									类型：课程设计资源
-								</c:if>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div style="height: 70px;width: 350px;background: #f0f0f0;padding-top: 9px;border:1px solid #dadada;border-top: 0">
-						<div style="margin-left: 42px;width: 193px;padding-bottom: 8px;float: left;">
-							<div style="width: 100%;padding-bottom: 8px;">${time[status.index] }</div>
-							<div style="width: 100%;">已下载：${task.useNum }</div>
-						</div>
-						<c:if test="${sessionScope.teacher == null }">
-						<div>
-							<a href="${pageContext.request.contextPath}/teacher/toSearchTaskResource/${task.taskId }">
-							<button type="button" class="btn btn-info" style="margin-top: 9px;">查看资源</button>
-							</a>
-						</div>
-						</c:if>
-						<c:if test="${isTeacher == 1 }">
-							<div>
-								<a href="${pageContext.request.contextPath}/teacher/toUpdateTaskResource/${task.taskId }"><button type="button" class="btn btn-info" style="margin-top: 9px;">修改资源</button></a>
-							</div>
-						</c:if>
-					</div>
-				</div>
-				
-			</li>
-			</div>
+        	<div class="resource col-md-3" id="resource_L">
+            <div class="resource_t col-md-12">
+            <p><span class="glyphicon glyphicon-stop"   aria-hidden="true" id="tag"></span>&nbsp;&nbsp;
+               	<c:if test="${task.taskType == 'work' }">
+						作业库
+					</c:if>
+					<c:if test="${task.taskType == 'trial' }">
+						实验库
+					</c:if>
+					<c:if test="${task.taskType == 'curriculum_design' }">
+						课程设计库
+				</c:if>
+			</p>    
+            </div>
+            <div class="resource_m col-md-12">
+            	<p class="tile">${task.taskTitle }</p>
+            	<p class="content">点击查看资源详情...</p> 
+            </div>
+            <div class="resource_b col-md-12"> 
+            	<span class="publish col-md-8">发布人：${task.publisherId }&nbsp;&nbsp;&nbsp;&nbsp;${time[status.index] }</span><span class="quote col-md-4">已下载：2${task.useNum }次</span>
+            </div>
+        </div>
 			</c:forEach>
-			</div>
-			</c:if>
-			
-			<!-- <li style="float: left;height: 170px;width: 350px;margin-top: 25px; margin-right: 20px;">
-				<div style="height: 170px;width: 350px;">
-					<div style="height: 100px;width: 350px;background: #fff;padding-top: 23px;border: 1px solid #dadada; border-bottom: 0">
-						<ul>
-							<li style="text-align: center; font-size: 23px;font-weight: 600;margin-bottom: 7px;">java教案一</li>
-							<li>
-								<div style="margin-left: 42px;float: left;width: 195px;">知识点：</div>
-								<div>发布人：</div>
-							</li>
-						</ul>
-					</div>
-					<div style="height: 70px;width: 350px;background: #f0f0f0;padding-top: 22px;border:1px solid #dadada;border-top: 0">
-						<div style="margin-left: 42px;float: left;width: 195px;">2019.1.12</div>
-								<div>已下载：72</div>
-					</div>
-				</div>
-			</li>
-			<li style="float: left;height: 170px;width: 350px;margin-top: 25px; margin-right: 20px;">
-				<div style="height: 170px;width: 350px;">
-					<div style="height: 100px;width: 350px;background: #fff;padding-top: 23px;border: 1px solid #dadada; border-bottom: 0">
-						<ul>
-							<li style="text-align: center; font-size: 23px;font-weight: 600;margin-bottom: 7px;">java教案一</li>
-							<li>
-								<div style="margin-left: 42px;float: left;width: 195px;">知识点：</div>
-								<div>发布人：</div>
-							</li>
-						</ul>
-					</div>
-					<div style="height: 70px;width: 350px;background: #f0f0f0;padding-top: 22px;border:1px solid #dadada;border-top: 0">
-						<div style="margin-left: 42px;float: left;width: 195px;">2019.1.12</div>
-								<div>已下载：72</div>
-					</div>
-				</div>
-			</li>
-			<li style="float: left;height: 170px;width: 350px;margin-top: 25px; margin-right: 20px;">
-				<div style="height: 170px;width: 350px;">
-					<div style="height: 100px;width: 350px;background: #fff;padding-top: 23px;border: 1px solid #dadada; border-bottom: 0">
-						<ul>
-							<li style="text-align: center; font-size: 23px;font-weight: 600;margin-bottom: 7px;">java教案一</li>
-							<li>
-								<div style="margin-left: 42px;float: left;width: 195px;">知识点：</div>
-								<div>发布人：</div>
-							</li>
-						</ul>
-					</div>
-					<div style="height: 70px;width: 350px;background: #f0f0f0;padding-top: 22px;border:1px solid #dadada;border-top: 0">
-						<div style="margin-left: 42px;float: left;width: 195px;">2019.1.12</div>
-								<div>已下载：72</div>
-					</div>
-				</div>
-			</li> -->
-			
-		</ul>
+		</c:if>
 	</div>
 </div>
 <jsp:include page="/jsp/footer.jsp" flush="true"/>

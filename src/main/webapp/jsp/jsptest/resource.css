@@ -1,0 +1,104 @@
+/*main_b部分样式开始*/
+#resource_L
+{
+    height:185px;
+    background:white;
+    margin-left:5%;
+    padding-left:0;
+    padding-right:0;
+}
+#tag
+{
+	color:orange;
+}
+#resource_M
+{
+    height:185px;
+    background:white;
+    margin-left:2.5%;
+    padding-left:0;
+    padding-right:0;
+}
+#tag2
+{
+	color:deepskyblue
+}
+#resource_R{
+    height:185px;
+    background:white;
+    margin-left:2.5%;
+    padding-left:0;
+    padding-right:0;
+}
+#tag3{
+	color:greenyellow;
+}
+#tag4{
+	color:cyan;
+}
+#tag5{
+	color:plum;
+}
+#tag6
+{
+	color:#FFFF00;
+}
+.resource_t{
+	padding-top:5px;
+	height:20px;
+}
+.resource_m
+{
+	height:135px;
+}
+.resource_m .tile
+{
+	font-size: 20px;
+	margin-top:15px;
+	color:#4a4a4a;
+}
+.name{
+	margin-top:3px;
+}
+.publisher
+{
+	margin-bottom:5px;
+}
+.resource_m .content
+{
+	color:#4a4a4a;
+	font-size:15px;
+    line-height:24px;
+}
+.resource_b 
+{
+	height:30px;
+	padding-left:15;
+	padding-right:15;	
+	padding-bottom:0;
+	background:#f0f0f0;
+	line-height:30px;
+}
+.resource_b .publish
+{
+	padding-left:0;
+	padding-right:0;
+	padding-top:0;
+	padding-bottom:0;
+	font-size:12px;
+}
+.resource_b .quote{
+	font-size:12px;
+}
+.resource
+{
+	margin-bottom:15px;
+	transition: transform 0.3s linear;
+}
+.resource:hover
+{
+    box-shadow: 0 0 15px grey;
+    transform: translate(0,-5px);	
+}
+
+/*main_b部分样式结束*/

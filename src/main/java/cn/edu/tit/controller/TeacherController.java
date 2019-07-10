@@ -2842,8 +2842,9 @@ public class TeacherController {
 			}
 		}
 		mv.addObject("time", timeList);
-		mv.setViewName("/jsp/Teacher/courseResource");
 		mv.addObject("course", course);//返回信息
+//		mv.setViewName("/jsp/Teacher/courseResource");
+		mv.setViewName("/jsp/Teacher/courseResource");
 		return mv;
 	}
 
