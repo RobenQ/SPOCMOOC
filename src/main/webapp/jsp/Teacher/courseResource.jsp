@@ -167,6 +167,7 @@ $(document).ready(function() {
 	<div class="mian2_content" style="height: auto;width: auto;min-height: 170px;margin-left: 140px;margin-top: 0">
 			<c:if test="${resource != null }">
 			<c:forEach items="${resource }" var="re" varStatus="status">
+			<a href="${pageContext.request.contextPath}/teacher/toSearchResource/${re.resourceId }">
 			<div class="resource col-md-3" id="resource_L">
             	<div class="resource_t col-md-12">
                		<p><span class="glyphicon glyphicon-stop" aria-hidden="true" id="tag"></span>&nbsp;&nbsp;多媒体库</p>    
@@ -179,33 +180,56 @@ $(document).ready(function() {
             		<span class="publish col-md-8">发布人：${re.publisherId }&nbsp;&nbsp;&nbsp;&nbsp;${time[status.index] }</span><span class="quote col-md-4">已下载：${task.useNum }</span>
             	</div>
         	</div>
+        	</a>
         	</c:forEach>
 		</c:if>
 
 		<c:if test="${taskList != null }">
 			<c:forEach items="${taskList }" var="task" varStatus="status">
-        	<div class="resource col-md-3" id="resource_L">
-            <div class="resource_t col-md-12">
-            <p><span class="glyphicon glyphicon-stop"   aria-hidden="true" id="tag"></span>&nbsp;&nbsp;
-               	<c:if test="${task.taskType == 'work' }">
-						作业库
+			<a href="${pageContext.request.contextPath}/teacher/toSearchTaskResource/${task.taskId }">
+			<c:if test="${task.taskType == 'work' }">
+				<div class="resource col-md-3" id="resource_L">
+            		<div class="resource_t col-md-12">
+           			 	<p><span class="glyphicon glyphicon-stop"   aria-hidden="true" id="tag2"></span>&nbsp;&nbsp;作业库</p>    
+            		</div>
+            		<div class="resource_m col-md-12">
+            			<p class="tile">${task.taskTitle }</p>
+            			<p class="content">点击查看资源详情...</p> 
+            		</div>
+            		<div class="resource_b col-md-12"> 
+            			<span class="publish col-md-8">发布人：${task.publisherId }&nbsp;&nbsp;&nbsp;&nbsp;${time[status.index] }</span><span class="quote col-md-4">已下载：2${task.useNum }次</span>
+            		</div>
+        		</div>
 					</c:if>
 					<c:if test="${task.taskType == 'trial' }">
-						实验库
+						<div class="resource col-md-3" id="resource_L">
+            		<div class="resource_t col-md-12">
+           			 	<p><span class="glyphicon glyphicon-stop"   aria-hidden="true" id="tag3"></span>&nbsp;&nbsp;实验库</p>    
+            		</div>
+            		<div class="resource_m col-md-12">
+            			<p class="tile">${task.taskTitle }</p>
+            			<p class="content">点击查看资源详情...</p> 
+            		</div>
+            		<div class="resource_b col-md-12"> 
+            			<span class="publish col-md-8">发布人：${task.publisherId }&nbsp;&nbsp;&nbsp;&nbsp;${time[status.index] }</span><span class="quote col-md-4">已下载：2${task.useNum }次</span>
+            		</div>
+        		</div>
 					</c:if>
 					<c:if test="${task.taskType == 'curriculum_design' }">
-						课程设计库
+						<div class="resource col-md-3" id="resource_L">
+            		<div class="resource_t col-md-12">
+           			 	<p><span class="glyphicon glyphicon-stop"   aria-hidden="true" id="tag4"></span>&nbsp;&nbsp;课程设库</p>    
+            		</div>
+            		<div class="resource_m col-md-12">
+            			<p class="tile">${task.taskTitle }</p>
+            			<p class="content">点击查看资源详情...</p>
+            		</div>
+            		<div class="resource_b col-md-12"> 
+            			<span class="publish col-md-8">发布人：${task.publisherId }&nbsp;&nbsp;&nbsp;&nbsp;${time[status.index] }</span><span class="quote col-md-4">已下载：2${task.useNum }次</span>
+            		</div>
+        		</div>
 				</c:if>
-			</p>    
-            </div>
-            <div class="resource_m col-md-12">
-            	<p class="tile">${task.taskTitle }</p>
-            	<p class="content">点击查看资源详情...</p> 
-            </div>
-            <div class="resource_b col-md-12"> 
-            	<span class="publish col-md-8">发布人：${task.publisherId }&nbsp;&nbsp;&nbsp;&nbsp;${time[status.index] }</span><span class="quote col-md-4">已下载：2${task.useNum }次</span>
-            </div>
-        </div>
+        	</a>
 			</c:forEach>
 		</c:if>
 	</div>
