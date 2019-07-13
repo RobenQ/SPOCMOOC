@@ -384,7 +384,10 @@ header nav li a{
 	<main>
 	<div class="main_t">
 		<div class="container-fluid">
-			
+			<span style="color: white;margin-left: 5%"><a href="${pageContext.request.contextPath}/main/toMain" style="color: white">首页</a>>>
+				<a href="${pageContext.request.contextPath}/teacher/courseList" style="color: white">课程</a>>>
+					<a href="<c:url value='/teacher/toCourseDetail/${course.courseId }'/>" style="color: white">${course. courseName}</a>
+			</span>
 				<button type="button" class="btn btn-default" id="attention" onclick="attention()">关注</button>
 			
 			

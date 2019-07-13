@@ -274,16 +274,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										<img alt="" style="width: 100%; height: 100%;"
 											src="${pageContext.request.contextPath}/jsp/showImg.jsp?path=${item.firstPicture }" />
 									</div>
-									<div class="info" style="width: 100%; height: 70px; margin-bottom:2%;">
+									<div class="info" style="width: 100%; height: 160px; margin-bottom:2%; overflow: hidden;">
 										<div class="infoContent">
-											<h3 class="achievementTitle">
+											<p class="achievementTitle" style="font-family: 微软雅黑;margin-top:10px; font-size: 20px; font-weight: 20px;opacity: 1;">
 												<b>${item.achievementName }</b>
-											</h3>
-											<p class="description">${item.introduction }</p>
-											<p class="description">
-												<b>${item.achievementCategory }</b>推荐&nbsp&nbsp<span
-													class="publishTime">发布于：${item.finishTime }&nbsp;&nbsp;&nbsp;浏览量:${item.browseVolume }</span>
 											</p>
+											<div class="description" style="overflow: hidden;height: 40%">${item.introduction }</div>
+											<div style="margin-top: 0%" class="description">
+												<b>${item.achievementCategory }</b>推荐&nbsp&nbsp<span
+													class="publishTime" style="line-height: 15px">发布于：${item.finishTime }&nbsp;&nbsp;&nbsp;浏览量:${item.browseVolume }</span>
+											</div>
 											<%-- <p class="publishTime" style="float: right; color: gray">浏览量:${item.browseVolume }</p> --%>
 										</div>
 									</div>
@@ -299,7 +299,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                   	<a
 							href="${pageContext.request.contextPath}/achievement/toDetailCourseExpand?achievementId=${item.achievementId }">
 							<div class="chengguo-out"
-								style="padding: 0; height: 390px; margin-bottom: 2%;">
+								style="padding: 0; height: 390px; margin-bottom:2%;">
 								<div class="doorPlank xiangmu-out"
 									style="padding: 1.5rem; background-color: white; height: 100%;width: 91%;">
 									<div class="rel-img" style="width: 100%; height: 58%;">
@@ -308,16 +308,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										<img alt="" style="width: 100%; height: 100%;"
 											src="${pageContext.request.contextPath}/jsp/showImg.jsp?path=${item.firstPicture }" />
 									</div>
-									<div class="info" style="width: 100%; height: 80px;">
+									<div class="info" style="width: 100%; height: 160px; margin-bottom:2%; overflow: hidden;">
 										<div class="infoContent">
-											<h3 class="achievementTitle">
+											<p class="achievementTitle" style="font-family: 微软雅黑;margin-top:10px; font-size: 20px; font-weight: 20px;opacity: 1;">
 												<b>${item.achievementName }</b>
-											</h3>
-											<p class="description">${item.introduction }</p>
-											<p class="description">
-												<b>${item.achievementCategory }</b>推荐&nbsp&nbsp<span
-													class="publishTime">发布于：${item.finishTime }&nbsp;&nbsp;&nbsp;浏览量:${item.browseVolume }</span>
 											</p>
+											<div class="description" style="overflow: hidden;height: 40%">${item.introduction }</div>
+											<div style="margin-top: 0%" class="description">
+												<b>${item.achievementCategory }</b>推荐&nbsp&nbsp<span
+													class="publishTime" style="line-height: 15px">发布于：${item.finishTime }&nbsp;&nbsp;&nbsp;浏览量:${item.browseVolume }</span>
+											</div>
 											<%-- <p class="publishTime" style="float: right; color: gray">浏览量:${item.browseVolume }</p> --%>
 										</div>
 									</div>
