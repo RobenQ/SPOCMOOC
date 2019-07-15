@@ -121,6 +121,9 @@ $(document).ready(function() {
 	<%-- <a href="${pageContext.request.contextPath}/teacher/toCreateCourse" style="position: relative;top: -26px;left:269px"><button class="btn btn-default" >创建课程</button></a> --%>
 
 		<div class="banner_t">
+		<span style="color: black;margin-left: 0%"><a href="${pageContext.request.contextPath}/main/toMain" style="color: black">首页</a>&nbsp;&nbsp;>&nbsp;
+				<a href="${pageContext.request.contextPath}/teacher/courseList" style="color: black;">全部课程</a>
+			</span>
 			<ul>
 			<li>
 						<div class="div1">

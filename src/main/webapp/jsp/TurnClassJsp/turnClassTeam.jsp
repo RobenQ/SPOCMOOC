@@ -216,6 +216,12 @@
 	<main>
 	<div class="main_t">
 		<div class="container-fluid">
+		<span style="color: white;margin-left: 5%"><a href="${pageContext.request.contextPath}/main/toMain" style="color: white">首页</a>&nbsp;&nbsp;>&nbsp;
+				<a href="${pageContext.request.contextPath}/teacher/courseList" style="color: white">课程</a>&nbsp;&nbsp;>&nbsp;
+				<a href="<c:url value='/teacher/toCourseDetail/${course.courseId }'/>" style="color: white">${course. courseName}</a>&nbsp;&nbsp;>&nbsp;
+					<a href="/teacher/toCourseDetail/${course.courseId }/#turnClass" style="color: white">课堂翻转</a>&nbsp;&nbsp;>&nbsp;
+					<a href="${pageContext.request.contextPath}/turnClass/toTurnClassTeam?taskId=${item.taskId }" style="color: white">${task.taskTitle }</a>
+		</span>
 			<c:if test="${ attention != 2 }">
 				<button type="button" class="btn btn-default" id="attention"
 					onclick="attention()">关注</button>

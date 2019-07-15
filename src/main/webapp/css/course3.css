@@ -172,3 +172,15 @@ main .main_b .main_b_b .container{
     margin-top:10px;
 }
 /*main样式 */
+
+.main_m
+{
+    width:80%;
+    margin:1% auto;
+    background:white;
+    height:42px;
+}
+
+li{
+    list-style: none;
+}

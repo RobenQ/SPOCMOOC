@@ -110,6 +110,11 @@ $(document).ready(function() {
 <main>
     <div class="main_t">
 	<div class="container-fluid">
+	<span style="color: white;margin-left: 5%"><a href="${pageContext.request.contextPath}/main/toMain" style="color: white">首页</a>&nbsp;&nbsp;>&nbsp;
+				<a href="${pageContext.request.contextPath}/teacher/courseList" style="color: white">课程</a>&nbsp;&nbsp;>&nbsp;
+				<a href="<c:url value='/teacher/toCourseDetail/${course.courseId }'/>" style="color: white">${course. courseName}</a>&nbsp;&nbsp;>&nbsp;
+					<a href="${pageContext.request.contextPath}/teacher/toCourseResource/0" style="color: white">资源</a>
+	</span>
 		<c:if test="${ attention != 2 }">
 			<button type="button" class="btn btn-default" id="attention"
 				onclick="attention()">关注</button>
@@ -130,7 +135,7 @@ $(document).ready(function() {
 	</div>
 </div>
 
-<div class="main_b_t" style="margin-bottom: 70px;margin-left: 103px;">
+<%-- <div class="main_b_t" style="margin-bottom: 70px;margin-left: 103px;">
 				<nav>
 					<ul style="    margin-top: 25px;margin-left: -5px;">
 						<li style="float: left;margin-right: 25px"><a style="font-size: 22px;"
@@ -161,7 +166,18 @@ $(document).ready(function() {
 							</c:if> 
 					</ul>
 				</nav>
-			</div>
+			</div> --%>
+			<div class="main_m">
+        <ul class="nav nav-pills col-md-10">
+            <li role="presentation" class="active"><a href="${pageContext.request.contextPath}/teacher/toCourseResource/0">全部</a></li>
+            <li role="presentation"><a href="${pageContext.request.contextPath}/teacher/toCourseResource/6">教案库</a></li>
+            <li role="presentation"><a href="${pageContext.request.contextPath}/teacher/toCourseResource/7">教学资源库</a></li>
+            <li role="presentation"><a href="${pageContext.request.contextPath}/teacher/toCourseResource/5">多媒体资源库</a></li>
+            <li role="presentation"><a href="${pageContext.request.contextPath}/teacher/toCourseResource/8">作业库</a></li>
+            <li role="presentation"><a href="${pageContext.request.contextPath}/teacher/toCourseResource/9">实验库</a></li>
+            <li role="presentation"><a href="${pageContext.request.contextPath}/teacher/toCourseResource/10">课程设计库</a></li>
+        </ul>
+    </div>
 </main>
 <div class="main2" style="height: auto;width: auto;min-height: 800px;margin-left: -43px;">
 	<div class="mian2_content" style="height: auto;width: auto;min-height: 170px;margin-left: 140px;margin-top: 0">

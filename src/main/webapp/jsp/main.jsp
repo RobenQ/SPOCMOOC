@@ -280,9 +280,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												<b>${item.achievementName }</b>
 											</p>
 											<div class="description" style="overflow: hidden;height: 40%">${item.introduction }</div>
-											<div style="margin-top: 0%" class="description">
-												<b>${item.achievementCategory }</b>推荐&nbsp&nbsp<span
-													class="publishTime" style="line-height: 15px">发布于：${item.finishTime }&nbsp;&nbsp;&nbsp;浏览量:${item.browseVolume }</span>
+											<div style="margin-top: 0%;font-size: 1em" class="description">
+												<b>${item.achievementCategory }</b>推荐&nbsp&nbsp
+												<span class="publishTime" style="line-height: 15px;font-size: 1em">发布：${item.finishTime }&nbsp;&nbsp;&nbsp;浏览量:${item.browseVolume }</span>
 											</div>
 											<%-- <p class="publishTime" style="float: right; color: gray">浏览量:${item.browseVolume }</p> --%>
 										</div>
@@ -314,9 +314,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												<b>${item.achievementName }</b>
 											</p>
 											<div class="description" style="overflow: hidden;height: 40%">${item.introduction }</div>
-											<div style="margin-top: 0%" class="description">
+											<div style="margin-top: 0%;font-size: 1em" class="description">
 												<b>${item.achievementCategory }</b>推荐&nbsp&nbsp<span
-													class="publishTime" style="line-height: 15px">发布于：${item.finishTime }&nbsp;&nbsp;&nbsp;浏览量:${item.browseVolume }</span>
+													class="publishTime" style="line-height: 15px;font-size: 1em">发布：${item.finishTime }&nbsp;&nbsp;&nbsp;浏览量:${item.browseVolume }</span>
 											</div>
 											<%-- <p class="publishTime" style="float: right; color: gray">浏览量:${item.browseVolume }</p> --%>
 										</div>
