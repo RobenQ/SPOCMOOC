@@ -2537,7 +2537,7 @@ public class TeacherController {
 		Course course = (Course) request.getSession().getAttribute("course");
 		String courseId = "";
 		List<Teacher> teacherList = new ArrayList<>();
-		boolean isThisTeacher = false;
+		boolean isThisTeacher = true;
 		Teacher user =  (Teacher) request.getSession().getAttribute("teacher");
 		if(course != null){
 			courseId = course.getCourseId();

@@ -101,4 +101,8 @@
     transform: translate(0,-5px);	
 }
 
+.nav > li > a:focus, .nav > li > a:hover{
+	background-color: #337ab7;
+	color: white;
+}
 /*main_b部分样式结束*/

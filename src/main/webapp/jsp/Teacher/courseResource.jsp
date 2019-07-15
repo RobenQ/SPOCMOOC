@@ -15,7 +15,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <link rel="stylesheet" href="${pageContext.request.contextPath}/jsp/jsptest/resource.css">
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-3.2.1.js"></script>
   
-  <!-- <style>
+  <style>
   	.xiangmu-out .rel-img img{
     		width: 100%;
     		height: 100%;
@@ -94,16 +94,16 @@ $(document).ready(function() {
 	var cid = "${category}";
 	
 	if(cid != null && cid != "null" && cid != ""){
-		$("#"+cid).css("background","#015293");
-		$("#"+cid).css("color","#fff");
+		$("#"+cid).css("background","#337ab7");
+		$("#"+cid).css("color","white");
 	}
 	else{
-		$("#allSelect").css("background","#015293");
-		$("#allSelect").css("color","#fff");
+		$("#allSelect").css("background","white");
+		$("#allSelect").css("color","#337ab7");
 	} 
 	});
 	
-</script> -->
+</script>
 </head>
 <body>
 <jsp:include page="/jsp/top.jsp" flush="true" />
@@ -135,7 +135,7 @@ $(document).ready(function() {
 	</div>
 </div>
 
-<%-- <div class="main_b_t" style="margin-bottom: 70px;margin-left: 103px;">
+	<%-- <div class="main_b_t" style="margin-bottom: 70px;margin-left: 103px;">
 				<nav>
 					<ul style="    margin-top: 25px;margin-left: -5px;">
 						<li style="float: left;margin-right: 25px"><a style="font-size: 22px;"
@@ -168,14 +168,20 @@ $(document).ready(function() {
 				</nav>
 			</div> --%>
 			<div class="main_m">
-        <ul class="nav nav-pills col-md-10">
-            <li role="presentation" class="active"><a href="${pageContext.request.contextPath}/teacher/toCourseResource/0">全部</a></li>
-            <li role="presentation"><a href="${pageContext.request.contextPath}/teacher/toCourseResource/6">教案库</a></li>
-            <li role="presentation"><a href="${pageContext.request.contextPath}/teacher/toCourseResource/7">教学资源库</a></li>
-            <li role="presentation"><a href="${pageContext.request.contextPath}/teacher/toCourseResource/5">多媒体资源库</a></li>
-            <li role="presentation"><a href="${pageContext.request.contextPath}/teacher/toCourseResource/8">作业库</a></li>
-            <li role="presentation"><a href="${pageContext.request.contextPath}/teacher/toCourseResource/9">实验库</a></li>
-            <li role="presentation"><a href="${pageContext.request.contextPath}/teacher/toCourseResource/10">课程设计库</a></li>
+      	<ul class="nav nav-pills col-md-10">
+            <li role="presentation" ><a id="0" href="${pageContext.request.contextPath}/teacher/toCourseResource/0">全部</a></li>
+            <li role="presentation"><a id="6" href="${pageContext.request.contextPath}/teacher/toCourseResource/6">教案库</a></li>
+            <li role="presentation"><a id="7" href="${pageContext.request.contextPath}/teacher/toCourseResource/7">教学资源库</a></li>
+            <li role="presentation"><a id="5" href="${pageContext.request.contextPath}/teacher/toCourseResource/5">多媒体资源库</a></li>
+            <li role="presentation"><a id="8" href="${pageContext.request.contextPath}/teacher/toCourseResource/8">作业库</a></li>
+            <li role="presentation"><a id="9" href="${pageContext.request.contextPath}/teacher/toCourseResource/9">实验库</a></li>
+            <li role="presentation"><a id="10" href="${pageContext.request.contextPath}/teacher/toCourseResource/10">课程设计库</a></li>
+            <c:if test="${isTeacher == 1 && resourceName !='全部' }">
+            	<li role="presentation"><a id="10" href="${pageContext.request.contextPath}/teacher/toPublishResource/${category }/${course.courseId}">发布资源</a></li>
+				<%-- <li style="float: left;margin-right: 25px"><a style="font-size: 22px;"
+					href="${pageContext.request.contextPath}/teacher/toPublishResource/${category }/${course.courseId}"
+				><button id="10" class="btn btn-default daohang">发布资源</button></a></li> --%>
+			</c:if>
         </ul>
     </div>
 </main>
