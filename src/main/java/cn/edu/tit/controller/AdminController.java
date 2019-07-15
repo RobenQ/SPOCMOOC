@@ -343,12 +343,15 @@ public class AdminController {
 				request.getSession().setAttribute("admin", admin);//将amdin 放入session
 			}
 			else {
+				System.out.println("密码");
 				readResult = "密码输入不正确";	
 				mv.addObject("readResult", readResult);//返回信息
 				mv.addObject("admin", admin);
 				mv.setViewName("/jsp/Teacher/index");//设置返回页面
 			}
 		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("账号");
 			readResult = "账号输入不正确";
 			mv.addObject("readResult", readResult);//返回信息
 			mv.setViewName("/jsp/Teacher/index");//设置返回页面
