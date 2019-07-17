@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 import cn.edu.tit.bean.Course;
 import cn.edu.tit.bean.CourseExpand;
 import cn.edu.tit.bean.IURP;
+import cn.edu.tit.bean.LunboImage;
 import cn.edu.tit.bean.Teacher;
 import cn.edu.tit.iservice.IAchievementService;
 import cn.edu.tit.iservice.ITeacherService;
@@ -35,7 +36,10 @@ public class MainController {
 	public ModelAndView toMain(HttpServletRequest request){
 		ModelAndView mv = new ModelAndView();
 		try {
-
+			
+			//查询轮播图信息
+			List<LunboImage> lunboImages = teacherService.searchLunboImage();
+			mv.addObject("lunboImages", lunboImages);
 			//按时间查询前12个课程信息
 
 			//按时间查询前8个课程信息

@@ -76,6 +76,19 @@
 		<result column="category_detail" property="categoryDetail" />
 		<result column="category_num" property="categoryNum" />
 	</resultMap>
+	
+	<resultMap type="cn.edu.tit.bean.LunboImage" id="lunboimagemap">
+		<result column="orde" property="order" />
+		<result column="name" property="name" />
+	</resultMap>
+
+	<update id="changLunboImageByOrder">
+		update lunbo_image set orde=0 where orde=#{order};
+	</update>
+
+	<insert id="changLunboImageByOrder2">
+	insert into lunbo_image values(#{order},#{name});
+	</insert>
 
 	<!-- 增加教师信息 -->
 	<insert id="addTeacherInfo" parameterType="cn.edu.tit.bean.Teacher">

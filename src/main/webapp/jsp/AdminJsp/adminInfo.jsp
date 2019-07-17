@@ -117,6 +117,10 @@
 						href="${pageContext.request.contextPath}/admin/readRealClass"
 						class="waves-effect waves-dark" style="font-size: 20px">自然班管理</a>
 					</li>
+					<li><a
+						href="${pageContext.request.contextPath}/admin/toIndexLunboImagesManager"
+						class="waves-effect waves-dark" style="font-size: 20px">首页轮播图管理</a>
+					</li>
 				</ul>
 			</div>
 		</nav>

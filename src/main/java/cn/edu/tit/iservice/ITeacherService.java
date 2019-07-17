@@ -15,6 +15,7 @@ import cn.edu.tit.bean.Attendance;
 import cn.edu.tit.bean.Category;
 import cn.edu.tit.bean.Course;
 import cn.edu.tit.bean.IndustryUniversityResearchProject;
+import cn.edu.tit.bean.LunboImage;
 import cn.edu.tit.bean.Paper;
 import cn.edu.tit.bean.Prize;
 
@@ -859,6 +860,9 @@ public interface ITeacherService {
 	public String searchTaskMapVir(String taskId);
 	
 	public String deleteTaskAccByTid(String resourceId);
+	
 	public List<String> searchTurnTaskMapVir(String taskId);
+	
+	public List<LunboImage> searchLunboImage();
 	
 }

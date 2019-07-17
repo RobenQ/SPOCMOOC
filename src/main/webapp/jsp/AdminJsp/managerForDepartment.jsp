@@ -304,6 +304,10 @@
 						href="${pageContext.request.contextPath}/admin/toDepartmentManager"
 						class="waves-effect waves-dark"
 						style="font-size: 20px; background-color: #f8f8f8">学术委员会管理</a></li>
+					<li><a
+						href="${pageContext.request.contextPath}/admin/toIndexLunboImagesManager"
+						class="waves-effect waves-dark" style="font-size: 20px">首页轮播图管理</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

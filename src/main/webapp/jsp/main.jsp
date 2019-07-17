@@ -69,23 +69,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</ol>
 						<!--图片容器-->
 						<div class="carousel-inner">
-							<div class="item active">
-								<img src="${pageContext.request.contextPath}/images/banner_img01.jpg"/>
+							<div style="overflow: hidden;" class="item active">
+								<img width="100%" height="100%" src="${pageContext.request.contextPath}/images/${lunboImages[0].name}"/>
 								<!--添加对应标题和内容-->
 								
 							</div>
 							<div class="item">
-								<img src="${pageContext.request.contextPath}/images/banner_img02.jpg"/>
+								<img width="100%" height="100%" src="${pageContext.request.contextPath}/images/${lunboImages[1].name}"/>
 								<!--添加对应标题和内容-->
 								
 							</div>
 							<div class="item">
-								<img src="${pageContext.request.contextPath}/images/banner_img03.jpg"/>
+								<img width="100%" height="100%" src="${pageContext.request.contextPath}/images/${lunboImages[2].name}"/>
 								<!--添加对应标题和内容-->
 								
 							</div>
 							<div class="item">
-								<img src="${pageContext.request.contextPath}/images/banner_img04.jpg"/>
+								<img width="100%" height="100%" src="${pageContext.request.contextPath}/images/${lunboImages[3].name}"/>
 								<!--添加对应标题和内容-->
 								
 							</div>

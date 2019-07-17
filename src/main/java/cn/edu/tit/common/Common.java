@@ -29,12 +29,14 @@ import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.beanutils.ConvertUtils;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.apache.commons.io.FileUtils;
 import org.apache.ibatis.logging.Log;
 import org.apache.ibatis.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -531,6 +533,71 @@ public  class  Common {
         SimpleDateFormat mFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         return mFormat.format(formatTime);
     }
+    
+    /**
+	 * 管理员上传轮播图工具
+	 * @param request 请求request
+	 * @param uploadPath 文件上传文件夹路径（除了项目根目录之后的路径），路径前加“/”符号
+	 */
+	public static String belong;
+	public static String uplodeFile(HttpServletRequest request,String uploadPath) {
+		String filePath;//文件上传后的路径
+		String name = null;
+		// 判断表单的enctype值是不是"multipart/form-data"
+        boolean isMultipartContent = ServletFileUpload
+                .isMultipartContent(request);
+        if (!isMultipartContent) {
+            throw new RuntimeException("your form is not multipart/form-data");
+        }
+        // 创建一个DiskFileItemfactory工厂类
+        DiskFileItemFactory factory = new DiskFileItemFactory();
+        // 创建一个ServletFileUpload核心对象
+        ServletFileUpload sfu = new ServletFileUpload(factory);
+        // 解析request对象，并得到一个表单项的集合
+        try {
+            List<FileItem> fileItems = sfu.parseRequest(request);
+            // 遍历表单项数据
+            for (FileItem fileitem : fileItems) {
+                if (fileitem.isFormField()) {
+                    // 普通表单项
+                    String fieldName = fileitem.getString("UTF-8");
+                    String fieldValue = fileitem.getString("UTF-8");
+                    belong = fieldName;
+                    request.setAttribute("order", fieldValue);
+                    System.out.println(fieldName + "=====" + fieldValue);
+                } else {
+                    //上传表单项
+                    //得到文件输入流
+                    InputStream is = fileitem.getInputStream();
+                    //创建文件存储目录
+                    String directoryRealPath = request.getSession().getServletContext().getRealPath(uploadPath);
+                    String[] str = fileitem.getName().split("\\\\");
+                    String fileName = str[str.length-1];
+                    name = fileName;
+                    String type=fileName.indexOf(".")!=-1?fileName.substring(fileName.lastIndexOf(".")+1, fileName.length()):null;
+                    if (type.equalsIgnoreCase("jpg")||type.equalsIgnoreCase("jpeg")||type.equalsIgnoreCase("png")) {
+                    	File storeDirectory = new File(directoryRealPath+fileName);
+                        System.out.println(fileName);
+                        System.out.println(directoryRealPath);
+                        System.out.println(storeDirectory);
+//                      filePath = directoryRealPath + "/images";
+                        //使用apache commons-io包，将输入流转成文件
+                        FileUtils.copyInputStreamToFile(is, storeDirectory);
+                        return name;
+					}else {
+						System.out.println("文件更上传失败！");
+						return null;
+					}
+                    
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("文件更上传失败！");
+        }
+        return name;
+	}
     
     
 

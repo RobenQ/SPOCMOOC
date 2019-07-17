@@ -16,6 +16,7 @@ import cn.edu.tit.bean.Attendance;
 import cn.edu.tit.bean.Category;
 import cn.edu.tit.bean.Course;
 import cn.edu.tit.bean.IndustryUniversityResearchProject;
+import cn.edu.tit.bean.LunboImage;
 import cn.edu.tit.bean.Paper;
 import cn.edu.tit.bean.Prize;
 import cn.edu.tit.bean.RealClass;
@@ -585,5 +586,6 @@ public interface ITeacherDao {
 	public Integer getMaxManager(String employeeNum);
 	public String searchTaskMapVir(@Param("taskId")String taskId);
 	public List<String> searchTurnTaskMapVir(@Param("taskId")String taskId);
+	public List<LunboImage> searchLunboImage();
 
 }

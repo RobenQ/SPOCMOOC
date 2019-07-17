@@ -153,4 +153,8 @@ public interface IAdminDao {
 
 	public void updateTerm(Term te);
 	
+	public void changLunboImageByOrder(@Param("order")int order);
+	
+	public void changLunboImageByOrder2(@Param("order")int order,@Param("name")String name);
+	
 }

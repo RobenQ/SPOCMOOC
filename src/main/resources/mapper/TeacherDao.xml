@@ -48,6 +48,17 @@
 		<result column="truancy_num" property="truancyNum" />
 		<result column="publish_id" property="publishId" />
 	</resultMap>
+	
+	<resultMap type="cn.edu.tit.bean.LunboImage" id="lunboimagemap">
+		<result column="orde" property="order" />
+		<result column="name" property="name" />
+	</resultMap>
+	
+	<select id="searchLunboImage" resultMap="lunboimagemap">
+		select * from lunbo_image where orde in(1,2,3,4) order by orde;
+	</select>
+	
+	
 	<select id="getAttendanceDetail" resultMap="attendanceMap">
 		select * from
 		attendance where virtual_class_num =#{virtualClassNum}

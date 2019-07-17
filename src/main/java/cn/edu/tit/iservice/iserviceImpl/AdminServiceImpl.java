@@ -545,4 +545,10 @@ public class AdminServiceImpl implements IAdminService {
 			e.printStackTrace();
 		}
 	}
+
+	@Override
+	public void changLunboImageByOrder(int order,String name) {
+		iAdminDao.changLunboImageByOrder(order);
+		iAdminDao.changLunboImageByOrder2(order,name);
+	}
 }

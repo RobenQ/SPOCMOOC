@@ -39,6 +39,7 @@ import cn.edu.tit.bean.CourseExpand;
 import cn.edu.tit.bean.Department;
 import cn.edu.tit.bean.GDFCS;
 import cn.edu.tit.bean.IURP;
+import cn.edu.tit.bean.LunboImage;
 import cn.edu.tit.bean.RealClass;
 import cn.edu.tit.bean.SIAE;
 import cn.edu.tit.bean.Student;
@@ -1271,6 +1272,33 @@ public class AdminController {
 			response.getWriter().print(result);
 		} catch (IOException e1) {
 			e1.printStackTrace();
+		}
+	}
+	
+	@RequestMapping(value="toIndexLunboImagesManager")
+	public String toIndexLunboImagesManager() {
+		return "/jsp/AdminJsp/lunboimageManager";
+	}
+	
+	@RequestMapping(value="toIndexLunboImagesManager2")
+	public ModelAndView toIndexLunboImagesManager2(HttpServletRequest request,HttpServletResponse response) {
+		ModelAndView mv = new ModelAndView();
+		//查询轮播图信息
+		List<LunboImage> lunboImages = iTeacherService.searchLunboImage();
+		mv.addObject("lunboImages", lunboImages);
+		mv.setViewName("/jsp/AdminJsp/managerforlunboiamge");
+		return mv;
+	}
+	
+	@RequestMapping(value="changeLunboImage")
+	public void changeLunboImage(HttpServletRequest request,HttpServletResponse response) {
+//		int order = Integer.valueOf(request.getParameter("order"))-2;
+		String imageName = Common.uplodeFile(request, "/images/");
+		String order = Common.belong;
+		int order2 = Integer.valueOf(order)-1;
+		if (imageName!=null) {
+			System.out.println(order2);
+			iAdminService.changLunboImageByOrder(order2, imageName);
 		}
 	}
 }

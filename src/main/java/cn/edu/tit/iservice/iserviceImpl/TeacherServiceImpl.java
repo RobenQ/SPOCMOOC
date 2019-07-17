@@ -20,6 +20,7 @@ import cn.edu.tit.bean.Attendance;
 import cn.edu.tit.bean.Category;
 import cn.edu.tit.bean.Course;
 import cn.edu.tit.bean.IndustryUniversityResearchProject;
+import cn.edu.tit.bean.LunboImage;
 import cn.edu.tit.bean.Paper;
 import cn.edu.tit.bean.Prize;
 import cn.edu.tit.bean.RealClass;
@@ -1517,6 +1518,11 @@ public class TeacherServiceImpl implements ITeacherService{
 	@Override
 	public List<String> searchTurnTaskMapVir(String taskId) {
 		return teacherDao.searchTurnTaskMapVir(taskId);
+	}
+
+	@Override
+	public List<LunboImage> searchLunboImage() {
+		return teacherDao.searchLunboImage();
 	}
 
 }
