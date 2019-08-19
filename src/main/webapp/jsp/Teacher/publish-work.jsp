@@ -173,10 +173,12 @@
 			}, {
 				field : 'publisherId',
 				title : '发布者',
+				width :'10%'
 
 			}, {
 				field : 'taskType',
 				title : '分类',
+				width :'10%'
 
 			},/*  {
 				field : 'courseId',

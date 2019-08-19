@@ -850,13 +850,27 @@ public class TeacherController {
 
 	/**
 	 *直接一次性查出所有的数据,返回给前端，bootstrap-table自行分页
+	 * @throws Exception 
 	 */
 	@RequestMapping("/getTaskListPage")
 	@ResponseBody
-	public List<Task> getTaskListPage(HttpServletRequest request,@RequestParam(value = "taskCategory")String taskCategory){
+	public List<Task> getTaskListPage(HttpServletRequest request,@RequestParam(value = "taskCategory")String taskCategory) throws Exception{
 		List<Task> list = new ArrayList<Task>();
 		String courseId = (String) request.getSession().getAttribute("courseId");
 		list = teacherService.getTaskListPage(courseId, taskCategory);
+		for (Task task : list) {
+			if(task.getTaskType().equals("work")) {
+				task.setTaskType("作业");
+			}else if (task.getTaskType().equals("trial")) {
+				task.setTaskType("实验");
+			}else if (task.getTaskType().equals("course_design")) {
+				task.setTaskType("课程设计");
+			}else if (task.getTaskType().equals("turn_class")) {
+				task.setTaskType("翻转");
+			}
+			//将教师工号转化为教师姓名
+			task.setPublisherId(teacherService.teacherLoginByEmployeeNum( task.getPublisherId()).getTeacherName() );
+		}
 		return list;
 	}
 
